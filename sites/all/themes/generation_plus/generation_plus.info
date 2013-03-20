@@ -3,4 +3,3 @@ description = OpenSoft theme for generation plus
 version = VERSION
 core = 7.x
 stylesheets[all][] = css/layout.css
-
