@@ -1,10 +1,10 @@
 ;$Id$
 
 name = Opensoft
-description = Opensoft model for generation_plus.
+description = Opensoft module for generation_plus.
 package = Drupal 7 Development
 core = 7.x
-files[] = first.module
+files[] = opensoft.module
 
 ;dependencies[] = autoload
-;php = 5.3 
+;php = 5.3
