@@ -1,4 +1,3 @@
-<?php print $styles;?>
 <div id="wrapper">
     <div id="wrapper-main">
         <div id="header">
@@ -6,22 +5,9 @@
             <div id="logo"></div>
             <div id="quotation"></div>
         </div>
-        <?php if ($main_menu) { ?>
-            <div id="main-menu" class="navigation">
-                <?php print theme('links__system_main_menu', array(
-                    'links' => $main_menu,
-                    'attributes' => array(
-                        'id' => 'main-menu-links'
-                    ),
-                    'heading' => array(
-                        'text' => t('Main menu'),
-                        'level' => 'h2',
-                        'class' => array('element-invisible'),
-                    ),
-                ));
-                ?>
-            </div> <!-- /#main-menu -->
-        <?php } ?>
+        <div id="main-menu">
+            <?php print render($page['content']['superfish_1']);?>
+        </div>
         <div id="wrapper-content">
             <div id="content"></div>
             <div id="block-audios"></div>
@@ -36,3 +22,10 @@
         <div id="footer"></div>
     </div>
 </div>
+
+
+<?php if ($page['sidebar_first']): ?>
+    <div id="sidebar-first" class="column sidebar"><div class="section">
+            <?php print render($page['sidebar_first']); ?>
+        </div></div> <!-- /.section, /#sidebar-first -->
+<?php endif; ?>

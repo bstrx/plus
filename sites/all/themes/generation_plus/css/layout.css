@@ -12,6 +12,10 @@ body {
     background-image: url("../images/pattern.png");
 }
 
+#wrapper {
+    background: url("../images/wrapper.png") repeat-x;
+}
+
 #wrapper-main {
     padding-bottom: 70px;
 }
@@ -24,26 +28,27 @@ body {
 
 /*Header*/
 #header {
-    background-color: #dddddd;
+    background: #dddddd url("../images/wrapper.png") repeat-x;
     height: 210px;
 }
 
 /*Top menu*/
 #top-menu {
+
     background-color:#434343;
     height: 28px;
 }
 /*End Top menu*/
 
 #logo {
-    background-color: #dedede;
-    width: 50%;
-    height: 182px;/*210-28*/
+    width: 364px;
+    height: 108px;/*210-28*/
+    background: url("../images/logo.png") repeat-x;
     float: left;
+    margin: 37px 18px;
 }
 
 #quotation {
-    background-color: #dedede;
     width: 50%;
     height: 182px;/*210-28*/
     float: left;
