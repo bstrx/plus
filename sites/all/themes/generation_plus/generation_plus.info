@@ -1,7 +1,6 @@
 name = Generation Plus
-description = opensoft theme for generation plus
-package = Core
+description = OpenSoft theme for generation plus
 version = VERSION
 core = 7.x
-stylesheets[all][] = layout.css
+stylesheets[all][] = css/layout.css
 
