@@ -3,5 +3,4 @@ description = opensoft theme for generation plus
 package = Core
 version = VERSION
 core = 7.x
-stylesheets[all][] = layout.css
-
+stylesheets[all][] = css/layout.css
