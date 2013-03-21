@@ -2,11 +2,10 @@
 (content) и это нехорошо. С другой стороны, других напрягов по коду я не вижу
 
 -->
-<?php print render($page['content']['opensoft_last-articles']);?>
-<?php print render($page['content']['opensoft_last-photoreports']);?>
+<?
+$block = module_invoke('views', 'block_view', 'recent_articles-block');
+print render($block);
 
-
-<?php
 //При таком способе блок не зависит от региона, но он не проходит через свою tpl'ку ;(
 //ПЕЧАЛЬНО! Чтобы это исправить, необходима ещё куча кода при определении блока. Так - верхний вариант предпочтительней.
 

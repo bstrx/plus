@@ -3,29 +3,28 @@
 
 /**
  * Implementation of hook_block_info().
- */
+ *//*
 function opensoft_block_info() {
     $blocks['last-articles'] = array(
         'info' => t('Last articles'),
     );
 
-    $blocks['last-fotoreports'] = array(
-        'info' => t('Last fotoreports'),
+    $blocks['last-photoreports'] = array(
+        'info' => t('Last photoreports'),
     );
 
     return $blocks;
-}
+}*/
 
 /**
  * Implementation of hook_block_view().
- */
+
 function opensoft_block_view($delta='') {
     $block = array();
     switch ($delta) {
         case 'last-articles':
             $block['subject'] = t('Last articles');
-            $block['content'] = lastArticlesContents();
-            $block['articles'] = getArticles();
+            //$block['content'] = getLastArticles();
             break;
         case 'last-photoreports':
             $block['subject'] = t('Last photoreports');
@@ -33,20 +32,25 @@ function opensoft_block_view($delta='') {
             break;
     }
     return $block;
-}
+} */
 
 /**
  * custom html block
  * @return string
- */
-function lastArticlesContents() {
-    return array(3213121231123123);
-}
+
+function getLastArticles() {
+    $query = "SELECT nid FROM node WHERE type='article' ORDER BY created DESC LIMIT 3";
+    $result = db_query($query);
+    foreach ($result as $article) {
+        $result_arr[] = node_load($article->nid);
+    }
+    return $result_arr;
+} */
 
 /**
  * custom html block
  * @return string
- */
+
 function getLastPhotoreports() {
     return '523sefsefsefefs34';
 }
@@ -54,4 +58,4 @@ function getLastPhotoreports() {
 
 function getArticles() {
     return array('articles' => array(3, 23, 1321, 4));
-}
+}*/
