@@ -17,10 +17,6 @@ body {
 }
 
 #wrapper-main {
-    padding-bottom: 70px;
-}
-
-#wrapper-main {
     margin: 0 auto;
     padding-bottom: 70px;
     width: 1000px;
@@ -34,7 +30,6 @@ body {
 
 /*Top menu*/
 #top-menu {
-
     background-color:#434343;
     height: 28px;
 }
@@ -77,9 +72,32 @@ body {
 }
 
 #content {
-    background-color: #f8f8f8;
+
     height: 356px;
     margin-bottom: 18px;
+    background: #f8f8f8 url("../images/content.png") repeat-x; /* Старые браузеры */
+    background: -moz-radial-gradient(ellipse, #ffffff, #ededed); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0, center center, 100%,
+    color-stop(0%,#ffffff), color-stop(100%,#ededed)); /* Chrome, Safari4+ */
+    background: -webkit-radial-gradient(ellipse, #ffffff, #ededed); /* Chrome 10+, Safari 5.1+ */
+    background: -o-radial-gradient(ellipse, #ffffff, #ededed); /* Opera 12 */
+    background: -ms-radial-gradient(ellipse, #ffffff, #ededed); /* IE10 */
+    background: radial-gradient(ellipse, #ffffff, #ededed); /* CSS3 */
+    border-radius: 25px;
+}
+
+#video {
+    background-color:yellow;
+    float: left;
+    width: 576px;
+    height: 356px;
+    border-radius: 25px;
+}
+
+#subscription {
+    float: left;
+    width: 388px;
+    height: 356px;
 }
 /*End Content*/
 
@@ -88,30 +106,41 @@ body {
 #block-audios {
     background-color: red;
     height: 180px;
+    border-radius: 25px;
 }
 /*End Audios*/
 
 
-/*Reports*/
-#wrapper-reports {
+/*Photoreports*/
+#wrapper-photoreports {
     background-color: blue;
     height: 270px;
     margin-bottom: 18px;
 }
 
-#header-reports {
+#header-photoreports {
     background-color: #464646;
-    height: 50px;
+    height: 26px; /*50-paddings*/
+    padding: 12px 18px;/*12 =(50-26)/2*/
+    color: #ffffff;
+}
+#header-photoreports h3 {
+    display: inline-block;
+    vertical-align: super;
 }
 
-#block-reports {
+#logo-small {
+    margin-right: 10px;
+}
+
+#block-photoreports {
     background-color: red;
 }
 /*End Reports*/
 
 
 /*News*/
-#block-news {
+#block-articles {
     background-color: greenyellow;
     height: 257px;
     padding: 18px;
@@ -121,9 +150,36 @@ body {
 
 
 /*Footer*/
-#footer {
-    background-color: #a2a0a2;
-    height: 86px;
-    margin-bottom: 70px;
+#wrapper-footer {
+    height: 87px;
 }
+
+#qr-code {
+    float: left;
+    width: 87px;
+    height: 87px;
+    background-image: url("../images/qr_code.png");
+}
+
+#footer {
+    background: url("../images/pattern_footer.png");
+    height: 87px;
+    text-align: center;
+    color: #4c4c4c;
+
+}
+
+#footer-text {
+    padding-top: 35px;
+    padding-right: 18px;
+}
+
+
+#social {
+    width: 170px;
+    height: 20px;
+    background-color: yellow;
+    float:right;
+}
+
 /*End Footer*/
