@@ -1,22 +1,3 @@
-<!-- Это информация из двух блоков, блоки редактируются из шаблонных файлов неподалёку.Тут блоки зависят от региона
-(content) и это нехорошо. С другой стороны, других напрягов по коду я не вижу
-
--->
-<?
-$block = module_invoke('views', 'block_view', 'recent_articles-block');
-print render($block);
-
-//При таком способе блок не зависит от региона, но он не проходит через свою tpl'ку ;(
-//ПЕЧАЛЬНО! Чтобы это исправить, необходима ещё куча кода при определении блока. Так - верхний вариант предпочтительней.
-
-
-//$articlesBlock = module_invoke('opensoft', 'block_view', 'last-articles');
-//print $articlesBlock;
-
-// $photoreportsBlock = module_invoke('opensoft', 'block_view', 'last-photoreports');
-// print $photoreportsBlock;
-?>
-
 <div id="wrapper" bgcolor="chucknorris">
     <div id="wrapper-main">
         <div id="header">
@@ -62,3 +43,15 @@ print render($block);
             <?php print render($page['sidebar_first']); ?>
         </div></div> <!-- /.section, /#sidebar-first -->
 <?php endif; ?>
+
+
+<!--------------->
+<div style='clear:both'> </div>
+<?
+$block = module_invoke('views', 'block_view', 'recent_articles-block');
+print render($block);
+
+$block = module_invoke('views', 'block_view', 'recent_photoreports-block');
+print render($block);
+?>
+
