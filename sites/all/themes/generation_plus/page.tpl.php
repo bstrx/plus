@@ -23,7 +23,12 @@
                 <img id="logo-small" src="sites/all/themes/generation_plus/images/logo_small.png">
                 <h3>ФОТООТЧЕТЫ</h3>
             </div>
-            <div id="block-photoreports"></div>
+            <div id="block-photoreports">
+                <?php
+                    $block = module_invoke('views', 'block_view', 'recent_photoreports-block');
+                    print render($block);
+                ?>
+            </div>
         </div>
 
         <div class="clear"></div>
@@ -55,13 +60,3 @@
             <?php print render($page['sidebar_first']); ?>
         </div></div> <!-- /.section, /#sidebar-first -->
 <?php endif; ?>
-
-
-<!--------------->
-<div style='clear:both'> </div>
-
-<?php
-$block = module_invoke('views', 'block_view', 'recent_photoreports-block');
-print render($block);
-?>
-

@@ -1,3 +1,5 @@
-<?php
-print_r($rows);
-
+<table id="table-recent-photoreports">
+    <tr>
+        <?php print($rows); ?>
+    </tr>
+</table>
