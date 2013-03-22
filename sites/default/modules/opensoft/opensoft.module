@@ -59,3 +59,28 @@ function getLastPhotoreports() {
 function getArticles() {
     return array('articles' => array(3, 23, 1321, 4));
 }*/
+
+
+function opensoft_mailing_form($form, &$form_state) {
+    $form['firstname'] = array(
+        '#title' => t('Firstname'),
+        '#type' => 'textfield',
+        '#required' => TRUE,
+    );
+    $form['lastname'] = array(
+        '#title' => t('Email'),
+        '#type' => 'textfield',
+    );
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => t('Подписаться'),
+    );
+    return $form;
+}
+
+function opensoft_mailing_form_validate($form, &$form_state) {
+    // Validation logic.
+}
+function opensoft_mailing_form_submit($form, &$form_state) {
+    // Submission logic.
+}

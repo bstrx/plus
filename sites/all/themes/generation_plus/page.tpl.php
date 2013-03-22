@@ -12,8 +12,22 @@
         </div>
         <div id="wrapper-content">
             <div id="content">
-                <div id="video"></div>
-                <div id="subscription"></div>
+                <div id="video">
+                    <video width="576" height="356" controls>
+                        <source src="sites/all/themes/generation_plus/images/small.ogg" type="video/ogg">
+                        <source src="sites/all/themes/generation_plus/images/small.webm" type="video/webm"/>
+                        <source src="sites/all/themes/generation_plus/images/small.mp4" type="video/mp4">
+
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div id="subscription">
+                    <?php
+                        print drupal_render(drupal_get_form('opensoft_mailing_form'));
+
+                    ?>
+
+                </div>
             </div>
             <div id="block-audios"></div>
         </div>
@@ -54,7 +68,7 @@
     </div>
 </div>
 
-
+<div class='clear'></div>
 <?php if ($page['sidebar_first']): ?>
     <div id="sidebar-first" class="column sidebar"><div class="section">
             <?php print render($page['sidebar_first']); ?>

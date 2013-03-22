@@ -123,11 +123,16 @@ ul.sf-menu > li > ul > li > a {
 }
 
 #video {
-    background-color:yellow;
+    background-color:#708090;
     float: left;
     width: 576px;
     height: 356px;
     border-radius: 25px;
+}
+
+video {
+    border-radius: 25px;
+    outline: none;
 }
 
 #subscription {
@@ -149,7 +154,7 @@ ul.sf-menu > li > ul > li > a {
 
 /*Photoreports*/
 #wrapper-photoreports {
-    background-color: blue;
+
     height: 269px;
     margin-bottom: 18px;
 }
@@ -170,7 +175,7 @@ ul.sf-menu > li > ul > li > a {
 }
 
 #block-photoreports {
-    background-color: red;
+
 }
 
 table#table-recent-photoreports {
@@ -227,14 +232,14 @@ table#table-recent-photoreports td{
 #footer {
     background: url("../images/pattern_footer.png");
     height: 87px;
-    text-align: center;
-    color: #4c4c4c;
 
+    color: #4c4c4c;
 }
 
 #footer-text {
+    text-align: center;
     padding-top: 35px;
-    padding-right: 18px;
+
 }
 
 
@@ -243,6 +248,7 @@ table#table-recent-photoreports td{
     height: 20px;
     background-color: yellow;
     float: right;
+    margin-right: 18px;
 }
 
 /*End Footer*/
