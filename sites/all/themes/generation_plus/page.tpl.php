@@ -1,7 +1,9 @@
-<div id="wrapper" bgcolor="chucknorris">
+<div id="wrapper">
     <div id="wrapper-main">
         <div id="header">
-            <div id="top-menu"></div>
+            <div id="top-menu">
+                Саратов
+            </div>
             <div id="logo"></div>
             <div id="quotation"></div>
         </div>
