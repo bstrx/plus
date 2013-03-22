@@ -1,4 +1,4 @@
-<div id="wrapper" bgcolor="chucknorris">
+<div id="wrapper">
     <div id="wrapper-main">
         <div id="header">
             <div id="top-menu">
@@ -29,7 +29,7 @@
         <div id="block-articles"></div>
         <div id="wrapper-footer">
             <div id="qr-code"></div>
-            <div id="footer" bgcolor="chucknorris">
+            <div id="footer">
                 <div id="footer-text">
                     <div id="social"></div>
                     <div>Copyright © 2003-2013 Поколение Plus</div>

@@ -59,24 +59,43 @@ body {
 
 /*Main menu*/
 #main-menu {
-    background-color: #e7e7e7;
     height: 83px; /*main 35px*/
+   /* background: url("../images/main_menu.png") repeat-x;*/
 }
 
 #main-menu-links li{
     display: inline;
 }
 
-.sf-menu li {
+ul.sf-menu > li {
     height: 36px;
     line-height: 36px;
-    background: url("../images/main_menu.png");
-    border-right: 1px solid #bdbdbd;
+    background: url("../images/main_menu_li.png");
+    border: 0px;
+    border-right: 3px solid transparent;
+    border-image: url("../images/main_menu_li_border.png") 3 36 stretch;
+    /*-webkit-border-image:url("../images/main_menu_li_border.png"); /* Safari 5 */
+
     padding: 0 26px;
 }
-.sf-menu li a {
+ul.sf-menu > li > a {
     color: #383838;
 }
+
+ul.sf-menu > li > ul{
+    width: 1000px !important;
+}
+
+ul.sf-menu > li > ul > li{
+    background-color: #464646;
+    display: inline-block;
+    width: auto !important;
+}
+
+ul.sf-menu > li > ul > li > a {
+    color: #68dcfd;
+}
+
 /*End Main menu*/
 
 
