@@ -145,12 +145,22 @@ video {
 
 /*Audios*/
 #block-audios {
-    background-color: red;
     height: 180px;
-    border-radius: 25px;
+}
+
+.recent-audio {
+    width: 330px;
+    padding-left:19px;
+}
+
+.recent-audio:first-child {
+    padding-left: 0px;
 }
 /*End Audios*/
 
+.rounded img{
+    border-radius: 25px;
+}
 
 /*Photoreports*/
 #wrapper-photoreports {
@@ -256,5 +266,6 @@ table#table-recent-photoreports td{
 div.clear {
     clear: both;
 }
+
 
 

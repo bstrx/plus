@@ -23,13 +23,16 @@
                 </div>
                 <div id="subscription">
                     <?php
-                        print drupal_render(drupal_get_form('opensoft_mailing_form'));
-
+                        //print drupal_render(drupal_get_form('opensoft_mailing_form'));
                     ?>
-
                 </div>
             </div>
-            <div id="block-audios"></div>
+            <div id="block-audios">
+                <?php
+                    $block = module_invoke('views', 'block_view', 'recent_audio-block');
+                    print render($block);
+                ?>
+            </div>
         </div>
 
         <div id="wrapper-photoreports">
