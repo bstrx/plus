@@ -1,3 +1,6 @@
-<?php
-print_r($rows);
+<table>
+    <tr>
+        <?php print($rows)?>
+    </tr>
+</table>
 
