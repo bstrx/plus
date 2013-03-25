@@ -230,10 +230,13 @@ table#table-recent-photoreports td{
 /*Footer*/
 #wrapper-footer {
     height: 87px;
+    position: relative;
+
 }
 
 #qr-code {
-    float: left;
+    position: absolute;
+    left: 0;
     width: 87px;
     height: 87px;
     background-image: url("../images/qr_code.png");
@@ -241,31 +244,22 @@ table#table-recent-photoreports td{
 
 #footer {
     background: url("../images/pattern_footer.png");
-    height: 87px;
-
+    height: 53px;
     color: #4c4c4c;
-}
-
-#footer-text {
     text-align: center;
-    padding-top: 35px;
-
+    padding-top: 34px;
 }
-
 
 #social {
+    position: absolute;
+    top: 34px;
+    right: 18px;
     width: 170px;
     height: 20px;
     background-color: yellow;
-    float: right;
-    margin-right: 18px;
 }
 
 /*End Footer*/
-
-div.clear {
-    clear: both;
-}
 
 
 

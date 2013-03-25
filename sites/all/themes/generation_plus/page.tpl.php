@@ -17,7 +17,6 @@
                         <source src="sites/all/themes/generation_plus/images/small.ogg" type="video/ogg">
                         <source src="sites/all/themes/generation_plus/images/small.webm" type="video/webm"/>
                         <source src="sites/all/themes/generation_plus/images/small.mp4" type="video/mp4">
-
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -48,8 +47,6 @@
             </div>
         </div>
 
-        <div class="clear"></div>
-
         <div id="block-articles">
             <?php
                 $block = module_invoke('views', 'block_view', 'recent_articles-block');
@@ -59,19 +56,14 @@
         <div id="wrapper-footer">
             <div id="qr-code"></div>
             <div id="footer">
-                <div id="footer-text">
-                    <div id="social"></div>
-                    <div>Copyright © 2003-2013 Поколение Plus</div>
-                </div>
+                    Copyright © 2003-2013 Поколение Plus
             </div>
+            <div id="social"></div>
         </div>
-
-        <div class="clear"></div>
-
     </div>
+
 </div>
 
-<div class='clear'></div>
 <?php if ($page['sidebar_first']): ?>
     <div id="sidebar-first" class="column sidebar"><div class="section">
             <?php print render($page['sidebar_first']); ?>
