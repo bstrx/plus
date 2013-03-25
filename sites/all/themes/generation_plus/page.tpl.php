@@ -4,7 +4,11 @@
             <div id="top-menu">
                 Саратов
             </div>
-            <div id="logo"></div>
+            <div id="logo">
+                <a href="<?php print $base_path?>">
+                    <img src="sites/all/themes/generation_plus/images/logo.png">
+                </a>
+            </div>
             <div id="quotation"></div>
         </div>
         <div id="main-menu">

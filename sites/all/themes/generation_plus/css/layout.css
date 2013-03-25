@@ -14,6 +14,14 @@ body {
     font-size: 9pt;
 }
 
+h3 {
+    font-size: 13pt;
+}
+
+a {
+    color: #0295e1;
+}
+
 tbody {
     border: 0px;
 }
@@ -47,7 +55,6 @@ tbody {
 #logo {
     width: 364px;
     height: 108px;/*210-28*/
-    background: url("../images/logo.png") repeat-x;
     float: left;
     margin: 37px 18px;
 }
@@ -67,7 +74,7 @@ tbody {
    /* background: url("../images/main_menu.png") repeat-x;*/
 }
 
-#main-menu-links li{
+#main-menu li{
     display: inline;
 }
 
@@ -112,7 +119,6 @@ ul.sf-menu > li > ul > li > a {
 }
 
 #content {
-
     height: 356px;
     margin-bottom: 18px;
     background: #f8f8f8 url("../images/content.png") repeat-x; /* Старые браузеры */
@@ -188,18 +194,41 @@ video {
     margin-right: 10px;
 }
 
-#block-photoreports {
-
-}
-
 table#table-recent-photoreports {
     width: 1000px;
-    border:none;
-    border-spacing: 0;
 }
 
-table#table-recent-photoreports td{
-    height: 219px;
+table#table-recent-photoreports .photoreport-content {
+    position: relative;
+    height: 164px;
+}
+
+table#table-recent-photoreports a {
+    display: block;
+    color: #292929;
+    text-decoration: none;
+}
+
+.photoreport-date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 55px;
+    height: 45px;
+    color: #464646;
+    text-align: center;
+    background: url("../images/photoreport-date.png");
+    padding-top: 10px;
+}
+
+.photoreport-date .day {
+    font-size: 17pt;
+    line-height: 17px;
+    font-weight: bold;
+}
+
+.photoreport-date .month {
+    font-size: 12pt;
 }
 
 .photoreport-title {
