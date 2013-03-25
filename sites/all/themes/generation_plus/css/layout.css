@@ -14,6 +14,10 @@ body {
     font-size: 9pt;
 }
 
+tbody {
+    border: 0px;
+}
+
 #wrapper {
     background: url("../images/wrapper.png") repeat-x;
 }
@@ -204,6 +208,16 @@ table#table-recent-photoreports td{
     background: url("../images/photoreport-title.png");
     line-height: 55px;
 }
+
+.photoreport-title a, .photoreport-title a:visited  {
+    color:  #464646;
+    text-decoration: none;
+}
+
+.photoreport-title a:hover  {
+    color:  #464646;
+    text-decoration: underline;
+}
 /*End Reports*/
 
 
@@ -220,10 +234,18 @@ table#table-recent-photoreports td{
     vertical-align: top;
 }
 
-.recent-article h3{
+.recent-article h3 a, .recent-article h3 a:visited{
     font-weight: bold;
     font-size: 9pt;
+    color: #171717;
+    text-decoration: none;
 }
+
+.recent-article h3 a:hover{
+    color: #171717;
+    text-decoration: underline;
+}
+
 /*End Articles*/
 
 

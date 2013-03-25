@@ -1,4 +1,4 @@
-<td class='recent-article article-content'>
+<td class='recent-article'>
     <h3>
         <?php print $fields['title']->content; ?>
     </h3>
