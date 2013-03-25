@@ -59,12 +59,36 @@ tbody {
     margin: 37px 18px;
 }
 
+/*Quotation*/
 #quotation {
     width: 581px;
     height: 182px;/*210-28*/
     float: right;
-    background-image: url("../images/quote.png");
+    position: relative;
 }
+
+#quotation-photo {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#quotation-quote {
+    margin: 40px 200px 10px 60px;
+    background-color: #ededed;
+    padding: 18px;
+    border-radius: 25px 25px 0 25px;
+}
+
+#quotation-person {
+    margin-right: 200px;
+    text-align: right;
+}
+#quotation-position {
+    font-size: 8pt;
+    color: #555555;
+ }
+/*End Quotation*/
 /*End Header*/
 
 
@@ -74,11 +98,11 @@ tbody {
    /* background: url("../images/main_menu.png") repeat-x;*/
 }
 
-#main-menu li{
-    display: inline;
+#main-menu ul.menu li{
+    display: inline-block;
 }
 
-ul.sf-menu > li {
+#main-menu ul.menu > li {
     height: 36px;
     line-height: 36px;
     background: url("../images/main_menu_li.png");
@@ -86,24 +110,24 @@ ul.sf-menu > li {
     border-right: 3px solid transparent;
     border-image: url("../images/main_menu_li_border.png") 3 36 stretch;
     /*-webkit-border-image:url("../images/main_menu_li_border.png"); /* Safari 5 */
-
-    padding: 0 26px;
+   /* padding: 0 26px;*/
 }
-ul.sf-menu > li > a {
+#main-menu ul.menu > li > a {
     color: #383838;
 }
 
-ul.sf-menu > li > ul{
-    width: 1000px !important;
+#main-menu ul.menu > li > ul{
+   /* width: 1000px !important;*/
 }
 
-ul.sf-menu > li > ul > li{
+#main-menu ul.menu > li > ul > li {
+    background-image: none;
     background-color: #464646;
     display: inline-block;
-    width: auto !important;
+   /* width: auto !important;*/
 }
 
-ul.sf-menu > li > ul > li > a {
+#main-menu ul.menu > li > ul > li > a {
     color: #68dcfd;
 }
 

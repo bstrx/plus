@@ -9,7 +9,12 @@
                     <img src="sites/all/themes/generation_plus/images/logo.png">
                 </a>
             </div>
-            <div id="quotation"></div>
+            <div id="quotation">
+                <?php
+                    $block = module_invoke('views', 'block_view', 'quotations-block');
+                    print render($block);
+                ?>
+            </div>
         </div>
         <div id="main-menu">
 
