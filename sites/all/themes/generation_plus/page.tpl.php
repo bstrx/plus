@@ -8,7 +8,8 @@
             <div id="quotation"></div>
         </div>
         <div id="main-menu">
-            <?php print render($page['content']['superfish_1']);?>
+
+            <?php $tree = menu_tree('main-menu');  print render($tree); ?>
         </div>
         <div id="wrapper-content">
             <div id="content">
@@ -63,6 +64,7 @@
     </div>
 
 </div>
+
 
 <?php if ($page['sidebar_first']): ?>
     <div id="sidebar-first" class="column sidebar"><div class="section">
