@@ -17,8 +17,13 @@
             </div>
         </div>
         <div id="main-menu">
+            <?php
+                $block = module_invoke('menu_block', 'block_view', 2);
+                print render($block['content']['#content']);
 
-            <?php $tree = menu_tree('main-menu');  print render($tree); ?>
+                $block = module_invoke('menu_block', 'block_view', 1);
+                print render($block['content']['#content']);
+            ?>
         </div>
         <div id="wrapper-content">
             <div id="content">
