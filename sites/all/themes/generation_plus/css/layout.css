@@ -110,19 +110,28 @@ ul.menu li > a {
 /*Main menu*/
 #main-menu {
     height: 36px;
-    background: url("../images/main-menu.png") repeat-x;
+
+}
+
+#main-menu ul.menu {
+    background: url("../images/main-menu.png");
+}
+
+#main-menu ul.menu > li {
+    margin-right: 1px;
 }
 
 #main-menu ul.menu > li > a {
-    line-height: 36px;
-    background: url("../images/main-menu-li-border.png") 100% 0  no-repeat;
-
+    background: url("../images/main-menu-li-a.png") repeat-x;
+    border: 1px solid #f5f5f5;
+    line-height: 34px;
 }
 
 #main-menu ul.menu > li > a:hover,
 #main-menu ul.menu > li.active > a {
     background: url("../images/main-menu-li-active.png") repeat-x;
     color: #ffffff;
+    border: 1px solid #e65555;
 }
 
 #main-menu ul.menu > li > a {
