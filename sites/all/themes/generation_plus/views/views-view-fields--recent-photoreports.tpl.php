@@ -19,19 +19,19 @@
     $day = date('d', $timestamp);
     $monthKey = date ('m', $timestamp);
     $month = $months[$monthKey];
-?>
-<td>
-    <a href="/">
-        <div class="photoreport-content">
-            <?php print $fields['field_report_main_foto']->content; ?>
-            <div class="photoreport-date" >
-                <div class="day"><?php print $day ?></div>
-                <div class="month"><?php print $month ?></div>
-            </div>
-        </div>
 
-        <div class="photoreport-title">
-            <?php print $fields['title']->content; ?>
+?>
+
+<a href="/">
+    <div class="photoreport-content">
+        <?php print $fields['field_report_main_foto']->content; ?>
+        <div class="photoreport-date" >
+            <div class="day"><?php print $day ?></div>
+            <div class="month"><?php print $month ?></div>
         </div>
-    </a>
-</td>
+    </div>
+
+    <div class="photoreport-title <?php print $classes_array[$id]; ?>">
+        <?php print $fields['title']->content; ?>
+    </div>
+</a>

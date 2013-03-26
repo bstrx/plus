@@ -51,7 +51,7 @@
 
         <div id="wrapper-photoreports">
             <div id="header-photoreports">
-                <img id="logo-small" src="sites/all/themes/generation_plus/images/logo_small.png">
+                <img id="logo-small" src="sites/all/themes/generation_plus/images/logo-small.png">
                 <h3>ФОТООТЧЕТЫ</h3>
             </div>
             <div id="block-photoreports">

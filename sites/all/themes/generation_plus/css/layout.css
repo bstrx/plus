@@ -74,14 +74,14 @@ tbody {
 }
 
 #quotation-quote {
-    margin: 40px 200px 10px 60px;
+    margin: 35px 190px 10px 40px;
     background-color: #ededed;
     padding: 18px;
-    border-radius: 25px 25px 0 25px;
+    border-radius: 20px 20px 0 20px;
 }
 
 #quotation-person {
-    margin-right: 200px;
+    margin-right: 190px;
     text-align: right;
 }
 #quotation-position {
@@ -95,7 +95,7 @@ tbody {
 /*Main menu*/
 #main-menu {
     height: 83px; /*main 35px*/
-   /* background: url("../images/main_menu.png") repeat-x;*/
+   /* background: url("../images/main-menu.png") repeat-x;*/
 }
 
 #main-menu ul.menu li{
@@ -105,11 +105,11 @@ tbody {
 #main-menu ul.menu > li {
     height: 36px;
     line-height: 36px;
-    background: url("../images/main_menu_li.png");
+    background: url("../images/main-menu-li.png");
     border: 0px;
     border-right: 3px solid transparent;
-    border-image: url("../images/main_menu_li_border.png") 3 36 stretch;
-    /*-webkit-border-image:url("../images/main_menu_li_border.png"); /* Safari 5 */
+    border-image: url("../images/main-menu-li-border.png") 3 36 stretch;
+    /*-webkit-border-image:url("../images/main-menu-li-border.png"); /* Safari 5 */
    /* padding: 0 26px;*/
 }
 #main-menu ul.menu > li > a {
@@ -210,11 +210,12 @@ video {
     color: #ffffff;
 }
 #header-photoreports h3 {
-    display: inline-block;
+    display: inline;
     vertical-align: super;
 }
 
 #logo-small {
+    display: inline;
     margin-right: 10px;
 }
 
@@ -261,6 +262,9 @@ table#table-recent-photoreports a {
     background: url("../images/photoreport-title.png");
     line-height: 55px;
 }
+#table-recent-photoreports td.views-row-first .photoreport-title{
+    background: url("../images/photoreport-title-first.png");
+}
 
 .photoreport-title a, .photoreport-title a:visited  {
     color:  #464646;
@@ -276,15 +280,20 @@ table#table-recent-photoreports a {
 
 /*Articles*/
 #block-articles {
-    background-color: white;
+    background-color: #ffffff;
     margin-bottom: 18px;
 }
+
 
 .recent-article {
     width: 301px;
     padding: 15px 15px 15px 17px;
-    background: white url("../images/article-left.png") repeat-y;
+    background: #ffffff url("../images/article-left.png") repeat-y;
     vertical-align: top;
+}
+
+.recent-article.views-row-first {
+    background: #ffffff;
 }
 
 .recent-article h3 a, .recent-article h3 a:visited{
@@ -314,11 +323,11 @@ table#table-recent-photoreports a {
     left: 0;
     width: 87px;
     height: 87px;
-    background-image: url("../images/qr_code.png");
+    background-image: url("../images/qr-code.png");
 }
 
 #footer {
-    background: url("../images/pattern_footer.png");
+    background: url("../images/pattern-footer.png");
     height: 53px;
     color: #4c4c4c;
     text-align: center;
