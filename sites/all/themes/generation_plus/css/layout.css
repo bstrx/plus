@@ -91,47 +91,60 @@ tbody {
 /*End Quotation*/
 /*End Header*/
 
+#wrapper-main-menu {
+    height: 83px; /*main 35px*/
+    background-color: #464646;
+}
+
+ul.menu li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.menu li > a {
+    display: block;
+}
 
 /*Main menu*/
 #main-menu {
-    height: 83px; /*main 35px*/
-   /* background: url("../images/main-menu.png") repeat-x;*/
-}
-
-#main-menu ul.menu li{
-    display: inline-block;
-}
-
-#main-menu ul.menu > li {
     height: 36px;
-    line-height: 36px;
-    background: url("../images/main-menu-li.png");
-    border: 0px;
-    border-right: 3px solid transparent;
-    border-image: url("../images/main-menu-li-border.png") 3 36 stretch;
-    /*-webkit-border-image:url("../images/main-menu-li-border.png"); /* Safari 5 */
-   /* padding: 0 26px;*/
+    background: url("../images/main-menu.png") repeat-x;
 }
+
 #main-menu ul.menu > li > a {
+    line-height: 36px;
+    background: url("../images/main-menu-li-border.png") 100% 0  no-repeat;
+
+}
+
+#main-menu ul.menu > li > a:hover,
+#main-menu ul.menu > li.active > a {
+    background: url("../images/main-menu-li-active.png") repeat-x;
+    color: #ffffff;
+}
+
+#main-menu ul.menu > li > a {
+    padding: 0 26px 0 23px;
     color: #383838;
 }
+/*Main menu*/
 
-#main-menu ul.menu > li > ul{
-   /* width: 1000px !important;*/
+/*Sub menu*/
+#main-menu-sub ul.menu {
+    margin-left: 110px;
 }
 
-#main-menu ul.menu > li > ul > li {
-    background-image: none;
-    background-color: #464646;
-    display: inline-block;
-   /* width: auto !important;*/
+#main-menu-sub ul.menu > li {
+    line-height: 47px;
+    padding: 0 31px;
 }
 
-#main-menu ul.menu > li > ul > li > a {
+#main-menu-sub ul.menu > li > a {
     color: #68dcfd;
 }
-
-/*End Main menu*/
+/*End Sub menu*/
 
 
 /*Content*/

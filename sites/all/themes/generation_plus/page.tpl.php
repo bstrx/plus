@@ -16,14 +16,19 @@
                 ?>
             </div>
         </div>
-        <div id="main-menu">
-            <?php
-                $block = module_invoke('menu_block', 'block_view', 2);
-                print render($block['content']['#content']);
-
-                $block = module_invoke('menu_block', 'block_view', 1);
-                print render($block['content']['#content']);
-            ?>
+        <div id="wrapper-main-menu">
+            <div id="main-menu">
+                 <?php
+                    $block = module_invoke('menu_block', 'block_view', 2);
+                    print render($block['content']['#content']);
+                ?>
+            </div>
+            <div id="main-menu-sub">
+                <?php
+                    $block = module_invoke('menu_block', 'block_view', 1);
+                    print render($block['content']['#content']);
+                ?>
+            </div>
         </div>
         <div id="wrapper-content">
             <div id="content">
