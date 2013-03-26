@@ -13,3 +13,13 @@ function generation_plus_menu_link__main_menu(array $variables) {
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
     return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>";
 }
+
+function generation_plus_theme() {
+
+    return array(
+        'opensoft_mailing_form' => array(
+            'render element' => 'form',
+            'template' => 'mailing-form',
+        ),
+    );
+}?>

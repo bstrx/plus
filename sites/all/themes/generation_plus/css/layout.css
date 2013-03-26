@@ -355,8 +355,10 @@ table#table-recent-photoreports a {
     height: 20px;
     background-color: yellow;
 }
-
 /*End Footer*/
 
+div.clear {
+    clear:both;
+}
 
 
