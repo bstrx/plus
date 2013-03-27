@@ -416,11 +416,11 @@ table#table-recent-photoreports a:hover {
     right: 18px;
     width: 170px;
     height: 27px;
-    background-color: yellow;
-    display: table-cell;
-
+    display: table;
 }
-#social a{
+
+#social a {
+    display: table-cell;
     vertical-align: middle;
 }
 /*End Footer*/

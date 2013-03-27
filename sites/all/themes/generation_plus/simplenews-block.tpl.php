@@ -4,4 +4,7 @@
 </p>
 
 <?php
+/*print render($form['realname']);*/
 print render($form);
+//print drupal_render_children($form);
+?>
