@@ -1,6 +1,9 @@
-<div class="form">
-    <?php // print render($form); ?>
-</div>
-<?php print drupal_render_children($form); ?>
+<?php //http://api.drupal.org/api/drupal/modules!search!search-block-form.tpl.php/7 ?>
 
-<?php //print_r($form);?>
+<div class="container-inline">
+    <?php if (empty($variables['form']['#block']->subject)): ?>
+    <h2 class="element-invisible"><?php print t('Search form'); ?></h2>
+
+    <?php endif; print_r( $search );?>
+    <?php print $search_form; ?>
+</div>
