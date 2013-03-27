@@ -39,6 +39,9 @@ tbody {
 .shadow {
     box-shadow: 0 5px 10px -2px #a9a9a9;
 }
+.rounded, .rounded img {
+    border-radius: 25px;
+}
 
 /*Header*/
 #header {
@@ -179,7 +182,6 @@ ul.menu li > a {
     background: -o-radial-gradient(ellipse, #ffffff, #ededed); /* Opera 12 */
     background: -ms-radial-gradient(ellipse, #ffffff, #ededed); /* IE10 */
     background: radial-gradient(ellipse, #ffffff, #ededed); /* CSS3 */
-    border-radius: 25px;
 }
 
 #video {
@@ -187,11 +189,9 @@ ul.menu li > a {
     float: left;
     width: 576px;
     height: 356px;
-    border-radius: 25px;
 }
 
 video {
-    border-radius: 25px;
     outline: none;
 }
 
@@ -238,16 +238,28 @@ video {
 .recent-audio {
     width: 330px;
     padding-left:19px;
+    position: relative;
 }
 
 .recent-audio:first-child {
     padding-left: 0;
 }
+
+.recent-audio a {
+    position: absolute;
+    display: block;
+    width: 110px;
+    height: 30px;
+    bottom: 10px;
+    margin-left: 18px;
+    padding-left: 20px;
+    color: #68dcfd;
+    line-height: 30px;
+    background-image: url("../images/audio-a.png");
+}
 /*End Audios*/
 
-.rounded img{
-    border-radius: 25px;
-}
+
 
 /*Photoreports*/
 #wrapper-photoreports {
@@ -379,7 +391,6 @@ table#table-recent-photoreports a:hover {
 #wrapper-footer {
     height: 87px;
     position: relative;
-
 }
 
 #qr-code {
@@ -393,6 +404,7 @@ table#table-recent-photoreports a:hover {
 #footer {
     background: url("../images/pattern-footer.png");
     height: 53px;
+    font-size: 10pt;
     color: #4c4c4c;
     text-align: center;
     padding-top: 34px;
@@ -403,8 +415,13 @@ table#table-recent-photoreports a:hover {
     top: 34px;
     right: 18px;
     width: 170px;
-    height: 20px;
+    height: 27px;
     background-color: yellow;
+    display: table-cell;
+
+}
+#social a{
+    vertical-align: middle;
 }
 /*End Footer*/
 
