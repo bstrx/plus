@@ -56,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div id="wrapper-photoreports">
+        <div id="wrapper-photoreports" class="shadow">
             <div id="header-photoreports">
                 <img id="logo-small" src="sites/all/themes/generation_plus/images/logo-small.png">
                 <h3>ФОТООТЧЕТЫ</h3>
@@ -69,13 +69,13 @@
             </div>
         </div>
 
-        <div id="block-articles">
+        <div id="block-articles" class="shadow">
             <?php
                 $block = module_invoke('views', 'block_view', 'recent_articles-block');
                 print render($block);
             ?>
         </div>
-        <div id="wrapper-footer">
+        <div id="wrapper-footer" class="shadow">
             <div id="qr-code"></div>
             <div id="footer">
                     Copyright © 2003-2013 Поколение Plus

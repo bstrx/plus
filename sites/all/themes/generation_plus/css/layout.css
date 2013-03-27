@@ -238,11 +238,13 @@ video {
 .recent-audio {
     width: 330px;
     padding-left:19px;
-    position: relative;
 }
 
 .recent-audio:first-child {
     padding-left: 0;
+}
+.recent-audio div {
+    position: relative;
 }
 
 .recent-audio a {
@@ -292,11 +294,9 @@ table#table-recent-photoreports {
     width: 1000px;
 }
 
-table#table-recent-photoreports td{
-    position: relative;
-}
 table#table-recent-photoreports .photoreport-content {
     height: 164px;
+    position: relative;
 }
 
 table#table-recent-photoreports a {
