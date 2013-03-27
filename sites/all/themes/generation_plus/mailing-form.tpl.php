@@ -1,11 +1,5 @@
-<?php //print_r($form); ?>
-<div class="form" id="contactwidget">
-
-    <div class="inp_l">
-        <div class="inp_r">
-            <?php print drupal_render($form['firstname']); ?>
-        </div>
-    </div>
-
-</div>
+<p>
+    Подпишись на нашу рассылку и получи<br />
+    <span>бесплатный видео курс!</span>
+</p>
 <?php print drupal_render_children($form); ?>

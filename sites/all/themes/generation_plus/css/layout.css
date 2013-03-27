@@ -197,9 +197,36 @@ video {
 
 #subscription {
     float: left;
-    width: 388px;
-    height: 356px;
+    width: 278px;
+    height: 266px;
+    padding: 45px 55px;
+    text-align: center;
 }
+
+#subscription p {
+    font-size: 11pt;
+}
+
+#subscription p span {
+    font-size: 16pt;
+    font-weight: bold;
+    color: #e10000;
+}
+
+#subscription input[type=text] {
+    padding: 5px;
+    font-size: 12pt;
+    font-style: italic;
+    border: 2px solid #464646;
+    color: #000000;
+}
+
+#subscription input[type=image] {
+    cursor: pointer;
+    width: 228px;
+    height: 66px;
+}
+
 /*End Content*/
 
 
@@ -214,7 +241,7 @@ video {
 }
 
 .recent-audio:first-child {
-    padding-left: 0px;
+    padding-left: 0;
 }
 /*End Audios*/
 

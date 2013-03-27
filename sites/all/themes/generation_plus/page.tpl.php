@@ -42,14 +42,12 @@
                         </video>
                     </div>
                     <div id="subscription">
-                        <div>Подпишись на нашу рассылку и получи бесплатный видео курс!</div>
                         <?php
                             print drupal_render(drupal_get_form('opensoft_mailing_form'));
                         ?>
                     </div>
 
                 </div>
-                <div class='clear'></div>
                 <div id="block-audios">
                     <?php
                         $block = module_invoke('views', 'block_view', 'recent_audio-block');
@@ -89,7 +87,6 @@
 
 </div>
 
-<div class='clear'</div>
 <?php if ($page['sidebar_first']): ?>
     <div id="sidebar-first" class="column sidebar"><div class="section">
             <?php print render($page['sidebar_first']); ?>
