@@ -3,6 +3,10 @@
         <div id="header">
             <div id="top-menu">
                 Саратов
+                <?php
+                    $tree = menu_tree('menu-top-menu');
+                    print render($tree);
+                ?>
             </div>
             <div id="logo">
                 <a href="<?php print $base_path?>">
@@ -19,7 +23,7 @@
         <div class="shadow">
             <div id="wrapper-main-menu">
                 <div id="main-menu">
-                     <?php
+                    <?php
                         $block = module_invoke('menu_block', 'block_view', 2);
                         print render($block['content']['#content']);
                     ?>

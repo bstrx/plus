@@ -31,7 +31,7 @@
         </div>
     </div>
 
-    <div class="photoreport-title <?php print $classes_array[$id]; ?>">
+    <div class="photoreport-title <?php isset($classes_array[$id]) ? print $classes_array[$id] : false; ?>">
         <?php print $fields['title']->content; ?>
     </div>
 </a>
