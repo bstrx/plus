@@ -1,3 +1,9 @@
+@font-face
+{
+    font-family: siteFont;
+    src: url('../fonts/Tahoma.ttf');
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,7 +16,7 @@ html, body, #wrapper {
 body {
     background-color: #fcfaf6;
     background-image: url("../images/pattern.png");
-    font-family: Tahoma, sans-serif;
+    font-family: siteFont, Tahoma, sans-serif;
     font-size: 9pt;
 }
 
@@ -25,7 +31,6 @@ a {
 tbody {
     border: 0px;
 }
-
 
 .shadow {
     box-shadow: 0 5px 10px -2px #a9a9a9;
@@ -151,11 +156,12 @@ ul.menu li {
 
 /*Main menu*/
 #main-menu {
+    background: url("../images/main-menu.png");
     height: 36px;
 }
 
 #main-menu ul.menu {
-    background: url("../images/main-menu.png");
+    background: url("../images/main-menu-border.png");
 }
 
 #main-menu ul.menu > li {
@@ -163,14 +169,14 @@ ul.menu li {
 }
 
 #main-menu ul.menu > li > a {
-    background: url("../images/main-menu-li-a.png") repeat-x;
+    background: url("../images/main-menu.png") repeat-x;
     border: 1px solid #f5f5f5;
     line-height: 34px;
 }
 
 #main-menu ul.menu > li > a:hover,
 #main-menu ul.menu > li.active > a {
-    background: url("../images/main-menu-li-active.png") repeat-x;
+    background: url("../images/main-menu-active.png") repeat-x;
     color: #ffffff;
     border: 1px solid #e65555;
 }
@@ -178,6 +184,21 @@ ul.menu li {
 #main-menu ul.menu > li > a {
     padding: 0 26px 0 23px;
     color: #383838;
+}
+
+#search-block-form {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+#search-block-form .form-item {
+    margin: 0;
+}
+
+#search-block-form input {
+    padding: 0 18px 0 5px;
+    width: 148px;
+    background: #ffffff url("../images/search.png") 100% no-repeat;
 }
 /*Main menu*/
 

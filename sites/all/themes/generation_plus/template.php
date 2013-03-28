@@ -25,32 +25,45 @@ function generation_plus_theme() {
 }
 
 function generation_plus_form_alter(&$form, &$form_state, $form_id) {
-    if ($form_id == 'simplenews_block_form_1') {
-        $form['realname'] = array(
-            '#type' => 'textfield',
-            '#required' => true,
-            '#size' => '26',
-            '#attributes' => array(
-                'placeholder' => 'ваше имя'
-            ),
-            '#weight' => 1
-        );
-        $form['mail'] = array(
-            '#type' => 'textfield',
-            '#required' => true,
-            '#size' => '26',
-            '#attributes' => array(
-                'placeholder' => 'ваш e-mail'
-            ),
-            '#weight' => 2
-        );
-        $form['submit'] = array(
-            '#type' => 'image_button',
-            '#button_type' => 'submit',
-            '#value' => t('Подписаться'),
-            '#src' => 'sites/all/themes/generation_plus/images/subscription.png',
-            '#weight' => 3
-        );
+    switch ($form_id) {
+        case 'simplenews_block_form_1': {
+
+            $form['realname'] = array(
+                '#type' => 'textfield',
+                '#required' => true,
+                '#size' => 26,
+                '#attributes' => array(
+                    'placeholder' => 'ваше имя'
+                ),
+                '#weight' => 1
+            );
+            $form['mail'] = array(
+                '#type' => 'textfield',
+                '#required' => true,
+                '#size' => 26,
+                '#attributes' => array(
+                    'placeholder' => 'ваш e-mail'
+                ),
+                '#weight' => 2
+            );
+            $form['submit'] = array(
+                '#type' => 'image_button',
+                '#button_type' => 'submit',
+                '#value' => t('Подписаться'),
+                '#src' => 'sites/all/themes/generation_plus/images/subscription.png',
+                '#weight' => 3
+            );
+
+        } case 'search_block_form': {
+            $form['search_block_form']['#size'] = 17;
+            $form['search_block_form']['#attributes'] = array(
+                'title' => 'Введите значиение для поиска и нажмите Enter',
+                'placeholder' => 'поиск',
+                'class' => array('rounded')
+            );
+
+        }
+
     }
 }
 ?>

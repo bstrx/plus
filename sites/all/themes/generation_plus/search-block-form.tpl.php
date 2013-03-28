@@ -1,9 +1,10 @@
-<?php //http://api.drupal.org/api/drupal/modules!search!search-block-form.tpl.php/7 ?>
-
-<div class="container-inline">
-    <?php if (empty($variables['form']['#block']->subject)): ?>
-    <h2 class="element-invisible"><?php print t('Search form'); ?></h2>
-
-    <?php endif; print_r( $search );?>
-    <?php print $search_form; ?>
-</div>
+<?php
+//print_r($form);
+/*$form['search_block_form']['#attributes'] = array(
+    'placeholder' => 'поиск'
+);
+print render($form['search_block_form']);
+print render($form['hidden']);*/
+print $search['search_block_form'];
+print $search['hidden'];
+?>

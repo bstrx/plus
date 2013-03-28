@@ -29,15 +29,15 @@
                     <?php
                         $block = module_invoke('menu_block', 'block_view', 2);
                         print render($block['content']['#content']);
+
+                        $block = module_invoke('search', 'block_view');
+                        print render($block);
                     ?>
                 </div>
                 <div id="main-menu-sub">
                     <?php
                         $block = module_invoke('menu_block', 'block_view', 1);
                         print render($block['content']['#content']);
-
-                        $block = module_invoke('search', 'block_view');
-                        print render($block);
                     ?>
                 </div>
             </div>
