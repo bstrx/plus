@@ -62,6 +62,8 @@ function generation_plus_form_alter(&$form, &$form_state, $form_id) {
                 'class' => array('rounded')
             );
 
+        } case 'user_login_block': {
+
         }
 
     }

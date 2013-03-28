@@ -1,15 +1,25 @@
 <div id="wrapper">
     <div id="wrapper-main">
+        <div id="user-login-block">
+            <?php
+            $block = module_invoke('user', 'block_view', 'login');
+            print render($block['content']);
+            ?>
+        </div>
         <div id="header">
             <div id="top-menu">
                 <div id="location">
                     <img src="sites/all/themes/generation_plus/images/location.png">
-                    <span>Саратов</span>
+                    <a href="#">Саратов</a>
                 </div>
                 <?php
                     $tree = menu_tree('menu-top-menu');
                     print render($tree);
                 ?>
+                <div id="login-block">
+                    <img src="sites/all/themes/generation_plus/images/key.png">
+                    <a href="#" id="login-link">Войти</a>
+                </div>
             </div>
             <div id="logo">
                 <a href="<?php print $base_path?>">
@@ -98,12 +108,4 @@
             </div>
         </div>
     </div>
-
 </div>
-
-<div class='clear'</div>
-<?php if ($page['sidebar_first']): ?>
-    <div id="sidebar-first" class="column sidebar"><div class="section">
-            <?php print render($page['sidebar_first']); ?>
-        </div></div> <!-- /.section, /#sidebar-first -->
-<?php endif; ?>

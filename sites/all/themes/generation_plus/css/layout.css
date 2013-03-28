@@ -28,6 +28,10 @@ a {
     color: #0295e1;
 }
 
+a:hover, a:active {
+    text-decoration: none;
+}
+
 tbody {
     border: 0px;
 }
@@ -45,7 +49,7 @@ ul.menu, ul.menu li, ul.menu li > a {
     padding: 0;
 }
 
-ul.menu li {
+ul.menu li, #user-login-form ul li {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -59,6 +63,31 @@ ul.menu li {
     margin: 0 auto;
     padding-bottom: 70px;
     width: 1000px;
+    position: relative;
+}
+
+#user-login-block {
+    display: none;
+    position: absolute;
+    top: 28px;
+    right: 8px;
+    width: 237px;
+    height: 195px;
+    z-index: 100;
+}
+
+#user-login-form {
+    padding-top: 8px;
+    background: url("../images/login-form-top.png") 195px 0 no-repeat;
+}
+
+#user-login-form > div {
+    padding: 10px;
+    background-color: #434343;
+}
+
+#user-login-form li > a {
+    color: #ffffff;
 }
 
 /*Header*/
@@ -68,22 +97,29 @@ ul.menu li {
 }
 
 /*Top menu*/
-#location {
-    float: left;
-}
-
-#location span {
-    vertical-align: super;
-    font-size: 10pt;
-    border-bottom: 1px dashed #ffffff;
-}
-
 #top-menu {
     background-color:#434343;
     height: 28px;
     border-radius: 0 0 25px 25px;
-    color: #ffffff;
     padding: 0 25px;
+}
+
+#top-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px dashed #ffffff;
+}
+
+#top-menu a:hover, a:active {
+    border-bottom: none;
+}
+
+#location {
+    float: left;
+}
+
+#location a {
+   vertical-align: super;
 }
 
 #top-menu ul.menu {
@@ -91,6 +127,7 @@ ul.menu li {
 }
 
 #top-menu ul.menu > li > a {
+    text-decoration: underline;
     line-height: 25px;
     padding: 0 19px 3px;
     color: #ffffff;
@@ -106,6 +143,15 @@ ul.menu li {
     border-top: 1px solid #141414;
     border-left: 1px solid #141414;
     border-bottom: 2px solid #e00000;
+}
+
+#login-block {
+    float: right;
+}
+
+#login-block a {
+    margin-left: 5px;
+    line-height: 25px;
 }
 /*End Top menu*/
 
@@ -467,7 +513,7 @@ table#table-recent-photoreports a:hover {
 
 #social {
     position: absolute;
-    top: 34px;
+    top: 30px;
     right: 18px;
 }
 
@@ -476,8 +522,7 @@ table#table-recent-photoreports a:hover {
 }
 /*End Footer*/
 
-div.clear {
-    clear:both;
-}
+
+
 
 
