@@ -35,7 +35,7 @@ function generation_plus_form_alter(&$form, &$form_state, $form_id) {
             ),
             '#weight' => 1
         );
-        $form['email'] = array(
+        $form['mail'] = array(
             '#type' => 'textfield',
             '#required' => true,
             '#size' => '26',

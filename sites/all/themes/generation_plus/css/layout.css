@@ -26,6 +26,26 @@ tbody {
     border: 0px;
 }
 
+
+.shadow {
+    box-shadow: 0 5px 10px -2px #a9a9a9;
+}
+.rounded, .rounded img {
+    border-radius: 25px;
+}
+
+ul.menu, ul.menu li, ul.menu li > a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+ul.menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 #wrapper {
     background: url("../images/wrapper.png") repeat-x;
 }
@@ -36,13 +56,6 @@ tbody {
     width: 1000px;
 }
 
-.shadow {
-    box-shadow: 0 5px 10px -2px #a9a9a9;
-}
-.rounded, .rounded img {
-    border-radius: 25px;
-}
-
 /*Header*/
 #header {
     background: #dddddd url("../images/wrapper.png") repeat-x;
@@ -50,12 +63,44 @@ tbody {
 }
 
 /*Top menu*/
+#location {
+    float: left;
+}
+
+#location span {
+    vertical-align: super;
+    font-size: 10pt;
+    border-bottom: 1px dashed #ffffff;
+}
+
 #top-menu {
     background-color:#434343;
     height: 28px;
     border-radius: 0 0 25px 25px;
     color: #ffffff;
     padding: 0 25px;
+}
+
+#top-menu ul.menu {
+    margin-left: 150px;
+}
+
+#top-menu ul.menu > li > a {
+    line-height: 25px;
+    padding: 0 19px 3px;
+    color: #ffffff;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+#top-menu ul.menu > li > a:hover,
+#top-menu ul.menu > li.active > a {
+    text-decoration: none;
+    background-color: #2e2e2e;
+    border-top: 1px solid #141414;
+    border-left: 1px solid #141414;
+    border-bottom: 2px solid #e00000;
 }
 /*End Top menu*/
 
@@ -103,21 +148,10 @@ tbody {
     background-color: #464646;
 }
 
-ul.menu li {
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-ul.menu li > a {
-    display: block;
-}
 
 /*Main menu*/
 #main-menu {
     height: 36px;
-
 }
 
 #main-menu ul.menu {
@@ -414,14 +448,10 @@ table#table-recent-photoreports a:hover {
     position: absolute;
     top: 34px;
     right: 18px;
-    width: 170px;
-    height: 27px;
-    display: table;
 }
 
 #social a {
-    display: table-cell;
-    vertical-align: middle;
+    margin-right: 10px;
 }
 /*End Footer*/
 

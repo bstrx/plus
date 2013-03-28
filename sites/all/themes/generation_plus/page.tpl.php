@@ -2,7 +2,10 @@
     <div id="wrapper-main">
         <div id="header">
             <div id="top-menu">
-                Саратов
+                <div id="location">
+                    <img src="sites/all/themes/generation_plus/images/location.png">
+                    <span>Саратов</span>
+                </div>
                 <?php
                     $tree = menu_tree('menu-top-menu');
                     print render($tree);
