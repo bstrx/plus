@@ -1,12 +1,10 @@
 <div id="wrapper">
     <div id="wrapper-main">
-        <div id="user-login-block">
-            <?php
-            $block = module_invoke('user', 'block_view', 'login');
-            print render($block['content']);
-            ?>
-        </div>
+
         <div id="header">
+
+            <?php print render($page['header'])?>
+
             <div id="top-menu">
                 <div id="location">
                     <img src="<?php print $directory ?>/images/location.png" width="17" height="22">
@@ -26,19 +24,24 @@
 
                 </div>
             </div>
+
             <div id="logo">
                 <a href="<?php print $base_path?>">
                     <img src="<?php print $directory ?>/images/logo.png" width="364" height="108">
                 </a>
             </div>
+
             <div id="quotation">
                 <?php
                     $block = module_invoke('views', 'block_view', 'quotations-block');
                     print render($block);
                 ?>
             </div>
+
         </div>
+
         <div class="shadow">
+
             <div id="wrapper-main-menu">
                 <div id="main-menu">
                     <?php
@@ -56,12 +59,12 @@
                     ?>
                 </div>
             </div>
+
             <div id="wrapper-content">
                 <div id="content" class="rounded">
                     <div id="video" class="rounded">
                         <object width="576" height="356"><param name="movie" value="http://www.youtube.com/v/c-mzGDaeoSQ?version=3&amp;hl=ru_RU&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
                             <embed src="http://www.youtube.com/v/c-mzGDaeoSQ?version=3&amp;hl=ru_RU&amp;rel=0" type="application/x-shockwave-flash" width="576" height="356" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-
                     </div>
                     <div id="subscription">
                         <?php
@@ -77,7 +80,9 @@
                     ?>
                 </div>
             </div>
+
         </div>
+
         <div id="wrapper-photoreports" class="shadow">
             <div id="header-photoreports">
                 <img id="logo-small" src="<?php print $directory ?>/images/logo-small.png">
@@ -97,6 +102,7 @@
                 print render($block);
             ?>
         </div>
+
         <div id="wrapper-footer" class="shadow">
             <div id="qr-code"></div>
             <div id="footer">
@@ -109,5 +115,6 @@
                 <a href="http://www.youtube.com/" target="_blank"><img src="<?php print $directory ?>/images/youtube.png" title="Youtube"></a>
             </div>
         </div>
+
     </div>
 </div>

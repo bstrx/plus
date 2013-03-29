@@ -33,7 +33,7 @@ function generation_plus_form_alter(&$form, &$form_state, $form_id) {
                 '#required' => true,
                 '#size' => 26,
                 '#attributes' => array(
-                    'placeholder' => 'ваше имя'
+                    'placeholder' => t('ваше имя')
                 ),
                 '#weight' => 1
             );
@@ -42,28 +42,44 @@ function generation_plus_form_alter(&$form, &$form_state, $form_id) {
                 '#required' => true,
                 '#size' => 26,
                 '#attributes' => array(
-                    'placeholder' => 'ваш e-mail'
+                    'placeholder' => t('ваш e-mail')
                 ),
                 '#weight' => 2
             );
             $form['submit'] = array(
                 '#type' => 'image_button',
                 '#button_type' => 'submit',
-                '#value' => t('Подписаться'),
                 '#src' => 'sites/all/themes/generation_plus/images/subscription.png',
                 '#weight' => 3
             );
-
+            break;
         } case 'search_block_form': {
             $form['search_block_form']['#size'] = 17;
             $form['search_block_form']['#attributes'] = array(
-                'title' => 'Введите значиение для поиска и нажмите Enter',
-                'placeholder' => 'поиск',
+                'title' => t('Введите значиение для поиска и нажмите Enter'),
+                'placeholder' => t('поиск'),
                 'class' => array('rounded')
             );
-
+            break;
         } case 'user_login_block': {
 
+            $form['name']['#title_display'] = 'invisible';
+            $form['name']['#required'] = true;
+            $form['name']['#attributes'] = array(
+                'placeholder' => t('логин')
+            );
+
+            $form['pass']['#title_display'] = 'invisible';
+            $form['pass']['#attributes'] = array(
+                'placeholder' => t('пароль')
+            );
+
+            $form['actions']['submit'] = array(
+                '#type' => 'image_button',
+                '#button_type' => 'submit',
+                '#src' => 'sites/all/themes/generation_plus/images/login.png',
+            );
+            break;
         }
 
     }

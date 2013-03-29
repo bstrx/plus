@@ -3,7 +3,4 @@
     <span>бесплатный видео курс!</span>
 </p>
 
-<?php
-
-print render($form);
-?>
+<?php print render($form); ?>
