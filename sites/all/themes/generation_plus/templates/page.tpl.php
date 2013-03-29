@@ -9,7 +9,7 @@
         <div id="header">
             <div id="top-menu">
                 <div id="location">
-                    <img src="sites/all/themes/generation_plus/images/location.png">
+                    <img src="<?php print $directory ?>/images/location.png" width="17" height="22">
                     <a href="#">Саратов</a>
                 </div>
                 <?php
@@ -17,13 +17,18 @@
                     print render($tree);
                 ?>
                 <div id="login-block">
-                    <img src="sites/all/themes/generation_plus/images/key.png">
-                    <a href="#" id="login-link">Войти</a>
+                    <img src="<?php print $directory ?>/images/key.png" width="19" height="9">
+                    <?php if (user_is_logged_in()): ?>
+                        <a href="<?php print $base_path ?>?q=user/logout">Выйти</a>
+                    <?php else: ?>
+                        <a href="#" id="login-link">Войти</a>
+                    <?php endif; ?>
+
                 </div>
             </div>
             <div id="logo">
                 <a href="<?php print $base_path?>">
-                    <img src="sites/all/themes/generation_plus/images/logo.png">
+                    <img src="<?php print $directory ?>/images/logo.png" width="364" height="108">
                 </a>
             </div>
             <div id="quotation">
@@ -78,7 +83,7 @@
         </div>
         <div id="wrapper-photoreports" class="shadow">
             <div id="header-photoreports">
-                <img id="logo-small" src="sites/all/themes/generation_plus/images/logo-small.png">
+                <img id="logo-small" src="<?php print $directory ?>/images/logo-small.png">
                 <h3>ФОТООТЧЕТЫ</h3>
             </div>
             <div id="block-photoreports">
@@ -101,10 +106,10 @@
                     Copyright © 2003-2013 Поколение Plus
             </div>
             <div id="social">
-                <a href="https://twitter.com/" target="_blank"><img src="sites/all/themes/generation_plus/images/twitter.png" title="Twitter"></a>
-                <a href="http://vk.com/" target="_blank"><img src="sites/all/themes/generation_plus/images/vk.png" title="ВКонтакте"></a>
-                <a href="http://www.odnoklassniki.ru/" target="_blank"><img src="sites/all/themes/generation_plus/images/od.png" title="Одноклассники"></a>
-                <a href="http://www.youtube.com/" target="_blank"><img src="sites/all/themes/generation_plus/images/youtube.png" title="Youtube"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="<?php print $directory ?>/images/twitter.png" title="Twitter"></a>
+                <a href="http://vk.com/" target="_blank"><img src="<?php print $directory ?>/images/vk.png" title="ВКонтакте"></a>
+                <a href="http://www.odnoklassniki.ru/" target="_blank"><img src="<?php print $directory ?>/images/od.png" title="Одноклассники"></a>
+                <a href="http://www.youtube.com/" target="_blank"><img src="<?php print $directory ?>/images/youtube.png" title="Youtube"></a>
             </div>
         </div>
     </div>
