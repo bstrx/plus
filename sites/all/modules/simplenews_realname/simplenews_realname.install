@@ -36,20 +36,6 @@ function simplenews_realname_schema() {
 }
 
 /**
- * Implementation of hook_install().
- */
-function simplenews_realname_install() {
-  drupal_install_schema('simplenews_realname');
-}
-
-/**
- * Implementation of hook_uninstall().
- */
-function simplenews_realname_uninstall() {
-  drupal_uninstall_schema('simplenews_realname');
-}
-
-/**
  * Create a new table to store real names and move the data there.
  */
 function simplenews_realname_update_6101() {

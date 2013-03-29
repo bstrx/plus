@@ -59,12 +59,9 @@
             <div id="wrapper-content">
                 <div id="content" class="rounded">
                     <div id="video" class="rounded">
-                        <video width="576" height="356" controls  class="rounded">
-                            <source src="sites/all/themes/generation_plus/images/small.ogg" type="video/ogg">
-                            <source src="sites/all/themes/generation_plus/images/small.webm" type="video/webm"/>
-                            <source src="sites/all/themes/generation_plus/images/small.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <object width="576" height="356"><param name="movie" value="http://www.youtube.com/v/c-mzGDaeoSQ?version=3&amp;hl=ru_RU&amp;rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
+                            <embed src="http://www.youtube.com/v/c-mzGDaeoSQ?version=3&amp;hl=ru_RU&amp;rel=0" type="application/x-shockwave-flash" width="576" height="356" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+
                     </div>
                     <div id="subscription">
                         <?php
