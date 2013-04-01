@@ -246,14 +246,21 @@ ul.menu li, #user-login-form ul li {
 }
 
 #main-menu ul.menu {
-    background: url("../images/main-menu-border.png");
+    background: url("../images/main-menu-border.png") repeat-x;
 }
 
 #main-menu ul.menu > li {
+    display: table-cell;
     margin-right: 1px;
+    text-align: center;
+}
+
+#main-menu ul.menu > li > img {
+    vertical-align: top;
 }
 
 #main-menu ul.menu > li > a {
+    display: block;
     background: url("../images/main-menu.png") repeat-x;
     border: 1px solid #f5f5f5;
     line-height: 34px;

@@ -22,4 +22,15 @@ jQuery(document).ready(function($) {
     }, function() {
         $('#user-login-block').slideUp(300);
     });
+
+    var  jImg = $('<img src="sites/all/themes/generation_plus/images/main-menu-active-corner.png" width="14" height="8">');
+    var jImgHover = jImg.clone();
+
+    $('#main-menu li > a.active').parent().append(jImg);
+    $('#main-menu li > a:not(a.active)').mouseover(function() {
+        $(this).parent().append(jImgHover);
+    });
+    $('#main-menu li > a.active').mouseover(function() {
+        jImgHover.remove();
+    });
 });
