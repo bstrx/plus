@@ -21,7 +21,6 @@
                     <?php else: ?>
                         <a href="#" id="login-link">Войти</a>
                     <?php endif; ?>
-
                 </div>
             </div>
 
