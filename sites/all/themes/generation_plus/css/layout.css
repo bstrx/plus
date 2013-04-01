@@ -135,10 +135,12 @@ ul.menu li, #user-login-form ul li {
 
 /*Top menu*/
 #top-menu {
+    position: relative;
     background-color:#434343;
     height: 28px;
     border-radius: 0 0 25px 25px;
     padding: 0 25px;
+    text-align: center;
 }
 
 #top-menu a {
@@ -152,15 +154,11 @@ ul.menu li, #user-login-form ul li {
 }
 
 #location {
-    float: left;
+    position: absolute;
 }
 
 #location a {
    vertical-align: super;
-}
-
-#top-menu ul.menu {
-    margin-left: 150px;
 }
 
 #top-menu ul.menu > li > a {
@@ -183,7 +181,9 @@ ul.menu li, #user-login-form ul li {
 }
 
 #login-block {
-    float: right;
+    position: absolute;
+    top: 0;
+    right: 25px;
 }
 
 #login-block a {
