@@ -548,7 +548,7 @@ function menu_tree_prune_tree(&$tree, $level, $parent_item = FALSE) {
     $found_active_trail = FALSE;
     // Examine each element at this level for the active trail.
     foreach ($tree AS $key => &$value) {
-      if ($tree[$key]['link']['in_active_trail']) {
+        if ($tree[$key]['link']['in_active_trail'] || ($tree[$key]['link']['link_path'] == '<front>' && drupal_is_front_page())) {
         // Get the title for the pruned tree.
         menu_block_set_title($tree[$key]['link']);
         // Prune the tree to the children of the item in the active trail.
