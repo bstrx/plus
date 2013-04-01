@@ -1,3 +1,4 @@
+<?php drupal_add_js('http://yandex.st/share/share.js'); ?>
 <div id="wrapper">
     <div id="wrapper-main">
 
@@ -74,7 +75,14 @@
                             $block = module_invoke('simplenews', 'block_view', '1');
                             print render($block['content']);
                         ?>
+                        <div id="share">
+                            <img src="<?php print $directory ?>/images/share.png" width="21" height="23">
+                            <div id="share-icons">
+                                <div class="yashare-auto-init" data-yashareL10n="ru" data-yashareType="none" data-yashareQuickServices="vkontakte,twitter,odnoklassniki"></div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
                 <div id="block-audios">
                     <?php

@@ -39,7 +39,7 @@ tbody {
 .shadow {
     box-shadow: 0 5px 10px -2px #a9a9a9;
 }
-.rounded, .rounded img {
+.rounded, .rounded > img {
     border-radius: 25px;
 }
 .bordered {
@@ -56,6 +56,10 @@ ul.menu li, #user-login-form ul li {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+.form-item, .form-actions {
+    margin: 0;
 }
 
 #wrapper {
@@ -91,8 +95,6 @@ ul.menu li, #user-login-form ul li {
     padding: 18px;
 }
 
-#user-login-form .form-item,
-#user-login-form .form-actions,
 #user-login-form .item-list ul {
     margin: 0;
 }
@@ -274,10 +276,6 @@ ul.menu li, #user-login-form ul li {
     margin-left: 30px;
 }
 
-#search-block-form .form-item {
-    margin: 0;
-}
-
 #search-block-form input {
     padding: 0 18px 0 5px;
     width: 148px;
@@ -334,6 +332,7 @@ video {
 }
 
 #subscription {
+    position: relative;
     float: left;
     width: 278px;
     height: 266px;
@@ -351,6 +350,10 @@ video {
     color: #e10000;
 }
 
+#subscription .form-item, #subscription .form-submit {
+    margin-top: 25px;
+}
+
 #subscription input[type=text] {
     padding: 5px;
     font-size: 12pt;
@@ -363,6 +366,26 @@ video {
     cursor: pointer;
     width: 228px;
     height: 66px;
+}
+
+#share {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 30px;
+    background-color: #adadad;
+    border-radius: 25px 0;
+    padding: 7px 7px 2px;
+}
+
+#share img {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+#share-icons {
+    display: none;
+    vertical-align: middle;
 }
 
 /*End Content*/
