@@ -1,6 +1,4 @@
 <table>
-    <tr>
-        <?php print($rows)?>
-    </tr>
+    <?php print($rows)?>
 </table>
 

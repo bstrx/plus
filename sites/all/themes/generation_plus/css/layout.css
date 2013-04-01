@@ -378,7 +378,7 @@ video {
     padding-left:19px;
 }
 
-.recent-audio:first-child {
+.recent-audio.views-row-first {
     padding-left: 0;
 }
 .recent-audio div {
