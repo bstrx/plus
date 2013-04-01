@@ -15,7 +15,7 @@
                     print render($tree);
                 ?>
                 <div id="login-block">
-                    <img src="<?php print $directory ?>/images/key.png" width="19" height="9">
+                    <img src="<?php print $directory ?>/images/key.png" width="19" height="10">
                     <?php if (user_is_logged_in()): ?>
                         <a href="<?php print $base_path ?>?q=user/logout">Выйти</a>
                     <?php else: ?>
