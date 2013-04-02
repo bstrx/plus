@@ -11,7 +11,17 @@ function generation_plus_menu_link__main_menu(array $variables) {
         $sub_menu = drupal_render($element['#below']);
     }
     $output = l($element['#title'], $element['#href'], $element['#localized_options']);
-    return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>";
+
+    $link = '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu;
+
+    //if menu item doesn't have parent
+    if (!$element['#original_link']['plid']) {
+        $link .= '<img src="sites/all/themes/generation_plus/images/main-menu-active-corner.png">';
+    }
+
+    $link .= '</li>';
+
+    return $link;
 }
 
 function generation_plus_theme() {

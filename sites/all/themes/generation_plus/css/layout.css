@@ -243,6 +243,7 @@ ul.menu li, #user-login-form ul li {
 #main-menu {
     background: url("../images/main-menu.png");
     height: 36px;
+    position: relative;
 }
 
 #main-menu ul.menu {
@@ -256,6 +257,7 @@ ul.menu li, #user-login-form ul li {
 }
 
 #main-menu ul.menu > li > img {
+    display: none;
     vertical-align: top;
 }
 
@@ -279,8 +281,9 @@ ul.menu li, #user-login-form ul li {
 }
 
 #search-block-form {
-    display: inline-block;
-    margin-left: 30px;
+    position: absolute;
+    top: 8px;
+    right: 30px;
 }
 
 #search-block-form input {
