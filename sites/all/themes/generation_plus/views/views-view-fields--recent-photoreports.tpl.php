@@ -19,10 +19,9 @@
     $day = date('d', $timestamp);
     $monthKey = date ('m', $timestamp);
     $month = $months[$monthKey];
-
 ?>
 
-<a href="/">
+<a href="<?php print url('node/').$fields['nid']->content; ?>">
     <div class="photoreport-content">
         <?php print $fields['field_report_main_foto']->content; ?>
         <div class="photoreport-shadow"></div>
