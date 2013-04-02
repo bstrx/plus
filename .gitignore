@@ -13,7 +13,6 @@ sites/*/private
 sites/files/js/
 
 # Ignore default text files
-.htaccess
 robots.txt
 /CHANGELOG.txt
 /COPYRIGHT.txt
