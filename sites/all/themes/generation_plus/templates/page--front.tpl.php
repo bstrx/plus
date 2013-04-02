@@ -18,7 +18,7 @@
                 <div id="login-block">
                     <img src="<?php print $directory ?>/images/key.png" width="19" height="10">
                     <?php if (user_is_logged_in()): ?>
-                    <a href="<?php print $base_path ?>?q=user/logout">Выйти</a>
+                    <a href="<?php print $base_path ?>user/logout">Выйти</a>
                     <?php else: ?>
                     <a href="#" id="login-link">Войти</a>
                     <?php endif; ?>
@@ -67,10 +67,10 @@
                 <div id="content" class="rounded">
                     <div id="video" class="rounded">
                         <object width="576" height="356">
-                            <param name="movie" value="http://www.youtube.com/v/c-mzGDaeoSQ?version=3&amp;hl=ru_RU&amp;rel=0"></param>
+                            <param name="movie" value="http://www.youtube.com/v/_BqgFzmF4WU?version=3&amp;hl=ru_RU&amp;rel=0"></param>
                             <param name="allowFullScreen" value="true"></param>
                             <param name="allowscriptaccess" value="always"></param>
-                            <embed src="http://www.youtube.com/v/c-mzGDaeoSQ?version=3&amp;hl=ru_RU&amp;rel=0" type="application/x-shockwave-flash" width="576" height="356" allowscriptaccess="always" allowfullscreen="true"></embed>
+                            <embed src="http://www.youtube.com/v/_BqgFzmF4WU?version=3&amp;hl=ru_RU&amp;rel=0" type="application/x-shockwave-flash" width="576" height="356" allowscriptaccess="always" allowfullscreen="true"></embed>
                         </object>
                     </div>
                     <div id="subscription">
