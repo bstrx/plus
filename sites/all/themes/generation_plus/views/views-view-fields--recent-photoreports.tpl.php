@@ -25,6 +25,7 @@
 <a href="/">
     <div class="photoreport-content">
         <?php print $fields['field_report_main_foto']->content; ?>
+        <div class="photoreport-shadow"></div>
         <div class="photoreport-date" >
             <div class="day"><?php print $day ?></div>
             <div class="month"><?php print $month ?></div>
