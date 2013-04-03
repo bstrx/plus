@@ -612,16 +612,21 @@ td:not(.views-row-first) .photoreport-shadow {
 
 /*Content*/
 #page-title {
-    padding: 0 18px;
-}
-
-.region-content {
-    padding: 18px;
+    margin-bottom: 18px;
 }
 
 .content p {
     font-size: 10pt;
     line-height: 14pt;
+}
+
+.photo-gallery > a {
+    display: inline-block;
+    margin-left: 10px ;
+    margin-bottom: 8px;
+}
+.photo-gallery > a.first {
+    margin-left: 0;
 }
 /*End Content*/
 
