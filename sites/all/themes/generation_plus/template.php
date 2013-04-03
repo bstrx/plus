@@ -16,7 +16,9 @@ function generation_plus_menu_link__main_menu(array $variables) {
 
     //if menu item doesn't have parent
     if (!$element['#original_link']['plid']) {
-        $link .= '<img src="sites/all/themes/generation_plus/images/main-menu-active-corner.png">';
+        global $base_root;
+        $img_base = $base_root . base_path() . path_to_theme();
+        $link .= '<img src= "' . $img_base . '/images/main-menu-active-corner.png">';
     }
 
     $link .= '</li>';
