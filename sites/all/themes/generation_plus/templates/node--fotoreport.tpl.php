@@ -22,7 +22,7 @@
             'title' => $photo['title'],
             'getsize' => FALSE,
         );
-        print ('<a href="'.file_create_url($photo['uri']).'" class="'.$class.'">'.theme_image_style($image_settings).'</a>');
+        print ('<a href="'.file_create_url($photo['uri']).'" rel="gallery" class="fancybox ' . $class . '">'.theme_image_style($image_settings).'</a>');
     }
 ?>
 
