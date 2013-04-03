@@ -14,14 +14,13 @@
         '12' => 'дек',
     );
 
-
     $timestamp = strtotime($fields['field_event_date']->content);
     $day = date('d', $timestamp);
     $monthKey = date ('m', $timestamp);
     $month = $months[$monthKey];
 ?>
 
-<a href="<?php print url('node/').$fields['nid']->content; ?>">
+<a href="<?php print url('node/' . $fields['nid']->content, array('absolute' => true)); ?>">
     <div class="photoreport-content">
         <?php print $fields['field_report_main_foto']->content; ?>
         <div class="photoreport-shadow"></div>
