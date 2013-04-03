@@ -1,9 +1,7 @@
-<?php drupal_add_js('http://yandex.st/share/share.js'); ?>
 <div id="wrapper">
     <div id="wrapper-main">
 
         <div id="header">
-
             <?php print render($page['header'])?>
 
             <div id="top-menu">
@@ -37,33 +35,33 @@
                     print render($block);
                 ?>
             </div>
-
         </div>
 
-        <div class="shadow">
-            <div id="wrapper-main-menu">
-                <div id="main-menu">
-                    <?php
-                        $block = module_invoke('menu_block', 'block_view', 2);
-                        print render($block['content']['#content']);
+        <div id="wrapper-main-menu" class="shadow">
+            <div id="main-menu">
+                <?php
+                    $block = module_invoke('menu_block', 'block_view', 2);
+                    print render($block['content']['#content']);
 
-                        $block = module_invoke('search', 'block_view');
-                        print render($block);
-                    ?>
-                </div>
-                <div id="main-menu-sub">
-                    <?php
-                        $block = module_invoke('menu_block', 'block_view', 1);
-                        print render($block['content']['#content']);
-                    ?>
-                </div>
+                    $block = module_invoke('search', 'block_view');
+                    print render($block);
+                ?>
+            </div>
+            <div id="main-menu-sub">
+                <?php
+                    $block = module_invoke('menu_block', 'block_view', 1);
+                    print render($block['content']['#content']);
+                ?>
             </div>
         </div>
 
-        <div class="shadow" id="wrapper-content">
-            <?php
-                print render($page['content']);
-            ?>
+        <div id="wrapper-content" class="shadow">
+            <?php if ($title): ?>
+                <h1 class="title" id="page-title">
+                    <?php print $title; ?>
+                </h1>
+            <?php endif; ?>
+            <?php print render($page['content']); ?>
         </div>
 
         <div id="wrapper-footer" class="shadow">

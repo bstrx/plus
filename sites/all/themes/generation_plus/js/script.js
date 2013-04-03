@@ -24,11 +24,4 @@ jQuery(document).ready(function($) {
     });
 
     $('#main-menu li > a.active').next().css('display', 'inline');
-
-    $('#main-menu li > a:not(.active)').hover(function() {
-        $(this).next().css('display', 'inline');
-    }, function() {
-        $(this).next().css('display', 'none');
-    });
-
 });

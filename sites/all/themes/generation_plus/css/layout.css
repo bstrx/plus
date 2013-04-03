@@ -9,15 +9,16 @@
     margin: 0;
 }
 
-html, body, #wrapper {
-    height: 100%;
-}
-
 body {
     background-color: #fcfaf6;
     background-image: url("../images/pattern.png");
     font-family: siteFont, Tahoma, sans-serif;
     font-size: 9pt;
+}
+
+h1 {
+    color: #4c4c4c;
+    font-size: 15pt;
 }
 
 h3 {
@@ -39,9 +40,11 @@ tbody {
 .shadow {
     box-shadow: 0 5px 10px -2px #a9a9a9;
 }
+
 .rounded, .rounded > img {
     border-radius: 25px;
 }
+
 .bordered {
     border: 1px solid black;
 }
@@ -288,7 +291,8 @@ ul.menu li, #user-login-form ul li {
 }
 
 #search-block-form input {
-    padding: 0 18px 0 5px;
+    border: 1px solid #c7c7c7;
+    padding: 1px 18px 1px 5px;
     width: 148px;
     background: #ffffff url("../images/search.png") 100% no-repeat;
 }
@@ -313,12 +317,11 @@ ul.menu li, #user-login-form ul li {
 /*Content*/
 #wrapper-content {
     background-color: #ffffff;
-    height: 554px;
     padding: 18px;
     margin-bottom: 18px;
 }
 
-#content {
+#main-content {
     height: 356px;
     margin-bottom: 18px;
     background: #f8f8f8 url("../images/content.png") repeat-x; /* Старые браузеры */
@@ -356,7 +359,7 @@ video {
 }
 
 #subscription p span {
-    font-size: 16pt;
+    font-size: 15pt;
     font-weight: bold;
     color: #e10000;
 }
@@ -366,6 +369,7 @@ video {
 }
 
 #subscription input[type=text] {
+    width: 260px;
     padding: 5px;
     font-size: 12pt;
     font-style: italic;
@@ -606,6 +610,19 @@ td:not(.views-row-first) .photoreport-shadow {
 /*End Footer*/
 
 
+/*Content*/
+#page-title {
+    padding: 0 18px;
+}
 
+.region-content {
+    padding: 18px;
+}
+
+.content p {
+    font-size: 10pt;
+    line-height: 14pt;
+}
+/*End Content*/
 
 
