@@ -20,11 +20,13 @@
 
         $image_settings = array(
             'style_name' => 'photoreport_small',
-            'path' => $photo['uri'],
-            'title' => $photo['title'],
-            'getsize' => false,
+            'path' => $photo['uri']
         );
-        print ('<a href="'.file_create_url($photo['uri']).'" rel="gallery" class="fancybox ' . $class . '">'.theme('image_style', $image_settings).'</a>');
+        print (
+            '<a href="'.file_create_url($photo['uri']).'" title="'.$photo['title'].'" rel="gallery" class="fancybox ' . $class . '">'
+            .theme('image_style', $image_settings)
+            .'</a>'
+        );
     }
 ?>
 
