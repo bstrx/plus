@@ -124,3 +124,32 @@
 
     </div>
 </div>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('#subscription input[type=image]').hover(function() {
+            $(this).attr('src', '<?php print $directory ?>/images/subscription-hover.png');
+        }, function() {
+            $(this).attr('src', '<?php print $directory ?>/images/subscription.png');
+        });
+
+        $('#user-login-form input[type=image]').hover(function() {
+            $(this).attr('src', '<?php print $directory ?>/images/login-hover.png');
+        }, function() {
+            $(this).attr('src', '<?php print $directory ?>/images/login.png');
+        });
+
+        $('#share > img').toggle(function() {
+            $('#share-icons').css('display', 'inline-block');
+        }, function() {
+            $('#share-icons').css('display', 'none');
+        });
+
+        $('#login-link').toggle(function() {
+            $('#user-login-block').slideDown(300);
+        }, function() {
+            $('#user-login-block').slideUp(300);
+        });
+
+        $('#main-menu li > a.active').next().css('display', 'inline');
+    });
+</script>

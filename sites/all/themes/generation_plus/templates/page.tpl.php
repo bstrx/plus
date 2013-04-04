@@ -22,7 +22,7 @@
                 <div id="login-block">
                     <img src="<?php print $img_base ?>/images/key.png" width="19" height="10">
                     <?php if (user_is_logged_in()): ?>
-                        <a href="<?php print $base_path ?>?q=user/logout">Выйти</a>
+                        <a href="<?php print $base_path ?>user/logout">Выйти</a>
                     <?php else: ?>
                         <a href="#" id="login-link">Войти</a>
                     <?php endif; ?>
@@ -80,3 +80,32 @@
 
     </div>
 </div>
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('#subscription input[type=image]').hover(function() {
+            $(this).attr('src', '<?php print $img_base ?>/images/subscription-hover.png');
+        }, function() {
+            $(this).attr('src', '<?php print $img_base ?>/images/subscription.png');
+        });
+
+        $('#user-login-form input[type=image]').hover(function() {
+            $(this).attr('src', '<?php print $img_base ?>/images/login-hover.png');
+        }, function() {
+            $(this).attr('src', '<?php print $img_base ?>/images/login.png');
+        });
+
+        $('#share > img').toggle(function() {
+            $('#share-icons').css('display', 'inline-block');
+        }, function() {
+            $('#share-icons').css('display', 'none');
+        });
+
+        $('#login-link').toggle(function() {
+            $('#user-login-block').slideDown(300);
+        }, function() {
+            $('#user-login-block').slideUp(300);
+        });
+
+        $('#main-menu li > a.active').next().css('display', 'inline');
+    });
+</script>

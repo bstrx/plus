@@ -319,6 +319,7 @@ ul.menu li, #user-login-form ul li {
     background-color: #ffffff;
     padding: 18px;
     margin-bottom: 18px;
+    min-height: 280px;
 }
 
 #main-content {
@@ -613,6 +614,10 @@ td:not(.views-row-first) .photoreport-shadow {
 /*Content*/
 #page-title {
     margin-bottom: 18px;
+}
+
+.content {
+    padding-bottom: 80px;
 }
 
 .content p {

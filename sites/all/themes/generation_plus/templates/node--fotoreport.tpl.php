@@ -9,6 +9,9 @@
 <?php
     $mainPhoto = $content['field_report_main_foto']['#items'][0];
     $photos = $content['field_report_foto']['#items'];
+    if (!count($photos)) {
+        $photos = array();
+    }
     array_unshift($photos, $mainPhoto);
 
     foreach ($photos as $i => $photo) {
@@ -18,11 +21,10 @@
         $image_settings = array(
             'style_name' => 'photoreport_small',
             'path' => $photo['uri'],
-            'alt' => $photo['alt'],
             'title' => $photo['title'],
-            'getsize' => FALSE,
+            'getsize' => false,
         );
-        print ('<a href="'.file_create_url($photo['uri']).'" rel="gallery" class="fancybox ' . $class . '">'.theme_image_style($image_settings).'</a>');
+        print ('<a href="'.file_create_url($photo['uri']).'" rel="gallery" class="fancybox ' . $class . '">'.theme('image_style', $image_settings).'</a>');
     }
 ?>
 
