@@ -77,15 +77,18 @@ function generation_plus_form_alter(&$form, &$form_state, $form_id) {
 
             $form['name']['#title_display'] = 'invisible';
             $form['name']['#required'] = true;
+            $form['name']['#weight'] = -2;
             $form['name']['#attributes'] = array(
                 'placeholder' => t('логин')
             );
 
             $form['pass']['#title_display'] = 'invisible';
+            $form['pass']['#weight'] = -1;
             $form['pass']['#attributes'] = array(
                 'placeholder' => t('пароль')
             );
 
+            $form['actions']['#weight'] = 0;
             $form['actions']['submit'] = array(
                 '#type' => 'image_button',
                 '#button_type' => 'submit',
