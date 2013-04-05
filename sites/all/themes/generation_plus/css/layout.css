@@ -21,6 +21,11 @@ h1 {
     font-size: 15pt;
 }
 
+h2 {
+    font-size: 14pt;
+    margin-bottom: 10px;
+}
+
 h3 {
     font-size: 13pt;
 }
@@ -34,7 +39,7 @@ a:hover, a:active {
 }
 
 tbody {
-    border: 0px;
+    border: 0;
 }
 
 .shadow {
@@ -623,6 +628,10 @@ td:not(.views-row-first) .photoreport-shadow {
 .content p {
     font-size: 10pt;
     line-height: 14pt;
+}
+
+.content ul {
+    padding-left: 18px;
 }
 
 .photo-gallery > a {

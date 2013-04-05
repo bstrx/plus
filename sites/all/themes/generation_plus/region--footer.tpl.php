@@ -46,11 +46,12 @@
 
         $('#search-block-form input').watermark('поиск');
 
-        var jLogin = $('#user-login-form input[name=realname]');
+        var jLogin = $('#user-login-form input[name=name]');
         var jPass = $('#user-login-form input[name=pass]');
+
         if (jLogin.length && jPass.length) {
-            jLogin.watemark('логин');
-            jPass.watemark('пароль');
+            jLogin.watermark('логин');
+            jPass.watermark('пароль');
         }
 
         var jName = $('.simplenews-subscribe input[name=realname]');
