@@ -20,9 +20,9 @@
         <div id="login-block">
             <img src="<?php print $theme_path ?>/images/key.png" width="19" height="10">
             <?php if (user_is_logged_in()): ?>
-            <a href="<?php print $base_path ?>user/logout">Выйти</a>
+                <?php print l(t('Выйти'), 'user/logout', array('absolute' => TRUE)) ?>
             <?php else: ?>
-            <a href="#" id="login-link">Войти</a>
+                <a href="#" id="login-link">Войти</a>
             <?php endif; ?>
         </div>
     </div>
