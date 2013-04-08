@@ -70,6 +70,14 @@ ul.menu li, #user-login-form ul li {
     margin: 0;
 }
 
+div.error, .error {
+    color: #8c2e0b !important;
+}
+
+.form-item input.error, .form-item textarea.error, .form-item select.error {
+    border: 2px solid red !important;
+}
+
 #wrapper {
     background: url("../images/wrapper.png") repeat-x;
 }

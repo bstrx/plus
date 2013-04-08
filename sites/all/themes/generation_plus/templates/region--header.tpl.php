@@ -8,12 +8,6 @@
 ?>
 
 <div id="header">
-    <div id="user-login-block">
-        <?php
-            $block = module_invoke('user', 'block_view', 'login');
-            print render($block);
-        ?>
-    </div>
     <div id="top-menu">
         <div id="location">
             <img src="<?php print $theme_path ?>/images/location.png" width="17" height="22">

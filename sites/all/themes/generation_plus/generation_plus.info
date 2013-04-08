@@ -7,3 +7,4 @@ regions[header] = Header
 regions[footer] = Footer
 regions[content] = Content
 regions[help] = Help
+regions[login] = Login

@@ -10,7 +10,8 @@ files/
 sites/*/files
 sites/*/private
 !sites/default/files
-sites/files/js/
+sites/default/files/js/
+sites/default/files/languages/
 
 # Ignore default text files
 robots.txt
