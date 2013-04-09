@@ -668,3 +668,13 @@ td:not(.views-row-first) .photoreport-shadow {
     margin-left: 0;
 }
 /*End Content*/
+
+.b-share-icon_vkontakte {
+    background: url("../images/vk_share.png") no-repeat !important;
+}
+.b-share-icon_twitter {
+    background: url("../images/twitter_share.png") no-repeat !important;
+}
+.b-share-icon_odnoklassniki {
+    background: url("../images/od_share.png") no-repeat !important;
+}
