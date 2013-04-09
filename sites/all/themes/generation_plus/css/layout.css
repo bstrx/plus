@@ -66,10 +66,6 @@ ul.menu li, #user-login-form ul li {
     padding: 0;
 }
 
-.form-item, .form-actions {
-    margin: 0;
-}
-
 div.error, .error {
     color: #8c2e0b !important;
 }
@@ -310,6 +306,10 @@ div.error, .error {
     position: absolute;
     top: 8px;
     right: 30px;
+}
+
+#search-block-form .form-item {
+    margin: 0;
 }
 
 #search-block-form input {
