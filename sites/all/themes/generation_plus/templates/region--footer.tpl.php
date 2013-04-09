@@ -3,10 +3,10 @@
     $theme_path = base_path() . $path_to_theme;
 ?>
 
-<div id="wrapper-footer" class="shadow">
+<div id="footer" class="shadow">
     <div id="qr-code"></div>
-    <div id="footer">
-        Copyright © 2003-2013 Поколение Plus
+    <div id="copyright">
+        <?php print_r($content);?>
     </div>
     <div id="social">
         <a href="https://twitter.com/" target="_blank"><img src="<?php print $theme_path ?>/images/twitter.png" title="Twitter"></a>
