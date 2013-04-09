@@ -39,7 +39,6 @@ function generation_plus_theme() {
 function generation_plus_form_alter(&$form, &$form_state, $form_id) {
     switch ($form_id) {
         case 'simplenews_block_form_1': {
-
             $form['realname'] = array(
                 '#type' => 'textfield',
                 '#required' => true,
@@ -68,35 +67,12 @@ function generation_plus_form_alter(&$form, &$form_state, $form_id) {
         } case 'search_block_form': {
             $form['search_block_form']['#size'] = 17;
             $form['search_block_form']['#attributes'] = array(
-                'title' => t('Введите значиение для поиска и нажмите Enter'),
+                'title' => t('Введите значение для поиска и нажмите Enter'),
                 'placeholder' => t('поиск'),
                 'class' => array('rounded')
             );
             break;
-        } case 'user_login_block': {
-
-            $form['name']['#title_display'] = 'invisible';
-            $form['name']['#required'] = true;
-            $form['name']['#weight'] = -2;
-            $form['name']['#attributes'] = array(
-                'placeholder' => t('логин')
-            );
-
-            $form['pass']['#title_display'] = 'invisible';
-            $form['pass']['#weight'] = -1;
-            $form['pass']['#attributes'] = array(
-                'placeholder' => t('пароль')
-            );
-
-            $form['actions']['#weight'] = 0;
-            $form['actions']['submit'] = array(
-                '#type' => 'image_button',
-                '#button_type' => 'submit',
-                '#src' => 'sites/all/themes/generation_plus/images/login.png',
-            );
-            break;
         }
-
     }
 }
 ?>
