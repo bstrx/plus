@@ -40,3 +40,8 @@ xmlrpc.php
 /profiles
 /scripts
 /themes
+
+#Ignore moodle
+moodle/cache/
+moodle/config.php
+moodledata/cache/
