@@ -42,7 +42,7 @@ xmlrpc.php
 /themes
 
 #Ignore moodle
-moodle/cache/
+!moodle/cache/
 moodle/config.php
 !moodle/index.php
 !moodle/install.php
