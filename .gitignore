@@ -44,4 +44,6 @@ xmlrpc.php
 #Ignore moodle
 moodle/cache/
 moodle/config.php
+!moodle/index.php
+!moodle/install.php
 moodledata/cache/
