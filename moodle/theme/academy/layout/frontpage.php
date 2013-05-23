@@ -120,7 +120,9 @@ echo $OUTPUT->doctype() ?>
         <div id="footer" class="shadow">
             <div id="qr-code"></div>
             <div id="copyright">
-                Copyright © 2013 Академия Молодежного Лидерства
+                <div class="block">
+                    <p>Copyright © 2013 Академия Молодежного Лидерства</p>
+                </div>
             </div>
             <div id="social">
                 <a href="https://twitter.com/" target="_blank"><img src="<?php echo $OUTPUT->pix_url('twitter', 'theme') ?>" title="Twitter"></a>

@@ -74,6 +74,9 @@ class block_repofile_generic extends block_repofile_type
   */
   $navlinks = array();
 
+  if (!isset($rpdata['path']))
+   return $navlinks;
+
   foreach ($rpdata['path'] as $key => $value)
   {
    $link = $value['path'];

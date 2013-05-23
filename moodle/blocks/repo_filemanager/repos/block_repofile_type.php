@@ -101,7 +101,7 @@ class block_repofile_type
  * @param newname The new file name
  **/
 
- public function rename_file($oldname, $newname)
+ public function rename_file($oldname, $newname, $dir)
  {
   return "";
  }

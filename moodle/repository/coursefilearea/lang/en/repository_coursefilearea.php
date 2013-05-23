@@ -36,3 +36,4 @@ $string['notitle'] = 'notitle';
 $string['remember'] = 'Remember me';
 $string['pluginname_help'] = 'Course file area';
 $string['pluginname'] = 'Course file area';
+$string['coursefilearea:view'] = 'Access Files';

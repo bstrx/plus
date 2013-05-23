@@ -6,7 +6,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 $module->version  = 2012100901;  // The current module version (Date: YYYYMMDDXX)
-if (isset($CFG) && $CFG->version>=2010000000)
+if ($CFG->version>=2010000000)
     $module->requires = 2010112400;
 else
     $module->requires = 2007101570;  // Requires this Moodle version

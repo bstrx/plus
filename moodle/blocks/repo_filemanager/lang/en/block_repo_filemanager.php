@@ -23,6 +23,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+$string['repo_filemanager:addinstance'] = 'Add a new Repository File Manager';
 $string['addfile'] = 'Add this file';
 $string['alldone'] = 'The file has now been added to your resource. Please close this window to continue.';
 $string['alreadyexists'] = 'already exists';

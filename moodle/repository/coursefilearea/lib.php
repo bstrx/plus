@@ -52,8 +52,8 @@ class repository_coursefilearea extends repository_coursefilearea_abs
     private function get_course()
     {
       global $CFG;
-      //For Moodle 2.2 and greater
-      if ($CFG->version > 2011120500)
+      //For Moodle 2.2 to 2.2.3+
+      if ($CFG->version > 2011120500 && $CFG->version < 2011120503.06)
       {
        global $USER, $DB;
        $cid=array_keys($USER->currentcourseaccess);
@@ -98,7 +98,7 @@ class repository_coursefilearea extends repository_coursefilearea_abs
      * @param string $encodedpath
      * @return mixed
      */
-    public function get_listing($path = '')
+    public function get_listing($path = '', $page = '')
     {
 
         global $CFG, $USER, $OUTPUT;

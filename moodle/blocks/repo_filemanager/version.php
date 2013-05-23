@@ -15,7 +15,7 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-$plugin->version = 2011101101;
+$plugin->version = 2013020301;
 $plugin->requires = 2011033003.01;
-$plugin->release = "Release Candidate 2";
-$plugin->maturity = MATURITY_RC;
+$plugin->release = "2013020301";
+$plugin->maturity = MATURITY_STABLE;
