@@ -52,6 +52,7 @@ tbody {
 
 .bordered {
     border: 1px solid black;
+    text-align: center;
 }
 
 ul.menu, ul.menu li, ul.menu li > a {
@@ -107,8 +108,8 @@ div.error, .error {
     background-color: #434343;
 }
 
-#user-login-form > div.bordered {
-    padding: 18px;
+#user-login-form div.bordered {
+    padding: 18px 18px 10px 18px;
 }
 
 #user-login-form .item-list ul {
@@ -141,7 +142,7 @@ div.error, .error {
     border-right: 1px solid #ffffff;
 }
 
-#user-login-form li > a {
+#user-login-form a {
     color: #ffffff;
 }
 
@@ -623,10 +624,6 @@ td:not(.views-row-first) .photoreport-shadow {
 
 #copyright .block {
     padding: 10px 35px 0;
-}
-
-#footer div {
-   /* display: inline;*/
 }
 
 #social {

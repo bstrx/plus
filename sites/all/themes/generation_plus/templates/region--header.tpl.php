@@ -6,6 +6,43 @@
     //add script for placeholders in IE<=8
     drupal_add_js($theme_path .'/js/jquery.watermark.min.js');
 ?>
+<div id="user-login-block">
+    <div id="user-login-form">
+        <form action="<?php print base_path() ?>moodle/login/index.php" method="post" >
+            <div class="bordered">
+                <div class="form-item">
+                    <input placeholder="логин" type="text" name="username" id="username" size="15" value="" maxlength="60" required>
+                </div>
+                <div class="form-item">
+                    <input placeholder="пароль" type="password" name="password" id="password" size="15" value="" maxlength="128" required>
+                </div>
+                <div class="form-actions">
+                    <input type="image" src="<?php print $theme_path ?>/images/login.png">
+
+                </div>
+                <div class="item-list">
+                    <ul>
+                        <li><a href="<?php print base_path() ?>moodle/login/forgot_password.php" title="Запросить новый пароль по электронной почте.">Забыли пароль?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </form>
+        <div class="item-list">
+            <ul>
+                <li class="first"><a href="#" title="Регистрация">Регистрация</a></li>
+                <li>
+                    <form action="<?php print base_path() ?>moodle/login/index.php" method="post" id="guestlogin">
+                        <div class="guestform">
+                            <input type="hidden" name="username" value="guest">
+                            <input type="hidden" name="password" value="guest">
+                            <a href="#" class="submit-link">Зайти гостем</a>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 <div id="header">
     <div id="top-menu">
@@ -19,6 +56,8 @@
             ?>
         <div id="login-block">
             <img src="<?php print $theme_path ?>/images/key.png" width="19" height="10">
+            <?php echo $OUTPUT->login_info(); ?>
+
             <?php if (user_is_logged_in()): ?>
                 <?php print l(t('Выйти'), 'user/logout', array('absolute' => TRUE)) ?>
             <?php else: ?>
@@ -61,3 +100,4 @@
         ?>
     </div>
 </div>
+

@@ -18,6 +18,10 @@
 
 <script type="text/javascript">
     jQuery(document).ready(function($) {
+        $('.submit-link').click(function(){
+            $(this).parents('form').submit();
+        });
+
         $('#subscription input[type=image]').hover(function() {
             $(this).attr('src', '<?php print $theme_path ?>/images/subscription-hover.png');
         }, function() {
@@ -46,8 +50,8 @@
 
         $('#search-block-form input').watermark('поиск');
 
-        var jLogin = $('#user-login-form input[name=name]');
-        var jPass = $('#user-login-form input[name=pass]');
+        var jLogin = $('#user-login-form input[name=username]');
+        var jPass = $('#user-login-form input[name=password]');
 
         if (jLogin.length && jPass.length) {
             jLogin.watermark('логин');

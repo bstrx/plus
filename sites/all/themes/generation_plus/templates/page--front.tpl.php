@@ -5,7 +5,6 @@
 
 <div id="wrapper">
     <div id="wrapper-main">
-        <?php print render($page['login']); ?>
 
         <?php print render($page['header']); ?>
 

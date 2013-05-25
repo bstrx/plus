@@ -35,6 +35,7 @@ echo $OUTPUT->doctype() ?>
     <title><?php echo $PAGE->title ?></title>
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
     <meta name="description" content="<?php p(strip_tags(format_text($SITE->summary, FORMAT_HTML))) ?>" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
     <?php echo $OUTPUT->standard_head_html() ?>
 </head>
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
@@ -43,19 +44,56 @@ echo $OUTPUT->doctype() ?>
 <div id="page">
     <!-- START OF HEADER -->
     <div id="page-header">
+
+        <div id="user-login-block">
+            <div id="user-login-form">
+                <form action="<?php echo get_login_url() ?>" method="post" >
+                    <div class="bordered">
+                        <div class="form-item">
+                            <input placeholder="логин" type="text" name="username" id="username" size="15" value="" maxlength="60" required>
+                        </div>
+                        <div class="form-item">
+                            <input placeholder="пароль" type="password" name="password" id="password" size="15" value="" maxlength="128" required>
+                        </div>
+                        <div class="form-actions">
+                            <input type="image" src="<?php echo $OUTPUT->pix_url('login', 'theme')?>">
+                        </div>
+                        <div class="item-list">
+                            <ul>
+                                <li><a href="<?php echo $CFG->wwwroot.'/login/forgot_password.php'; ?>" title="Запросить новый пароль по электронной почте.">Забыли пароль?</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+                <div class="item-list">
+                    <ul>
+                        <li class="first"><a href="#" title="Регистрация">Регистрация</a></li>
+                        <li>
+                            <form action="<?php echo get_login_url() ?>" method="post" id="guestlogin">
+                                <div class="guestform">
+                                    <input type="hidden" name="username" value="guest">
+                                    <input type="hidden" name="password" value="guest">
+                                    <a href="#" class="submit-link">Зайти гостем</a>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
         <div id="header">
             <div id="top-menu">
 
                 <?php if ($hascustommenu) { ?>
                     <div id="custommenu"><?php echo $custommenu; ?></div>
-                <?php } ?>
+                <?php }
+                    echo $PAGE->headingmenu;
+                ?>
 
                 <div id="login-block">
                     <img src="<?php echo $OUTPUT->pix_url('key', 'theme') ?>" width="19" height="10">
-                    <?php
-                        echo $OUTPUT->login_info();
-                        echo $PAGE->headingmenu;
-                    ?>
+                    <?php echo $OUTPUT->login_info(); ?>
                 </div>
             </div>
 
@@ -135,5 +173,33 @@ echo $OUTPUT->doctype() ?>
     <!-- END OF FOOTER -->
 </div>
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('.submit-link').click(function(){
+            $(this).parents('form').submit();
+        });
+
+        $('#user-login-form input[type=image]').hover(function() {
+            $(this).attr('src', '<?php echo $OUTPUT->pix_url('login-hover', 'theme') ?>');
+        }, function() {
+            $(this).attr('src', '<?php echo $OUTPUT->pix_url('login', 'theme') ?>');
+        });
+
+        $('#login-link').toggle(function() {
+            $('#user-login-block').slideDown(300);
+        }, function() {
+            $('#user-login-block').slideUp(300);
+        });
+
+        var jLogin = $('#user-login-form input[name=username]');
+        var jPass = $('#user-login-form input[name=password]');
+
+        if (jLogin.length && jPass.length) {
+            jLogin.watermark('логин');
+            jPass.watermark('пароль');
+        }
+    });
+</script>
 </body>
 </html>
