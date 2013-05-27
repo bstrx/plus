@@ -85,16 +85,20 @@ echo $OUTPUT->doctype() ?>
         <div id="header">
             <div id="top-menu">
 
-                <?php if ($hascustommenu) { ?>
-                    <div id="custommenu"><?php echo $custommenu; ?></div>
-                <?php }
-                    echo $PAGE->headingmenu;
-                ?>
-
                 <div id="login-block">
                     <img src="<?php echo $OUTPUT->pix_url('key', 'theme') ?>" width="19" height="10">
                     <?php echo $OUTPUT->login_info(); ?>
                 </div>
+
+                <?php if ($hascustommenu) { ?>
+                    <div id="custommenu"><?php echo $custommenu; ?></div>
+                <?php } ?>
+
+                <?php if ($hasheading) { ?>
+                <div class="headermenu">
+                    <?php echo $PAGE->headingmenu; ?>
+                </div>
+                <?php } ?>
             </div>
 
             <div id="logo">

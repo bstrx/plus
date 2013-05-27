@@ -18,7 +18,6 @@
                 </div>
                 <div class="form-actions">
                     <input type="image" src="<?php print $theme_path ?>/images/login.png">
-
                 </div>
                 <div class="item-list">
                     <ul>
@@ -50,19 +49,20 @@
             <img src="<?php print $theme_path ?>/images/location.png" width="17" height="22">
             <a href="#">Саратов</a>
         </div>
-            <?php
-                $tree = menu_tree('menu-top-menu');
-                print render($tree);
-            ?>
+
         <div id="login-block">
             <img src="<?php print $theme_path ?>/images/key.png" width="19" height="10">
-
             <?php if (user_is_logged_in()): ?>
                 <?php print l(t('Выйти'), 'user/logout', array('absolute' => true)) ?>
             <?php else: ?>
                 <a href="#" id="login-link">Войти</a>
             <?php endif; ?>
         </div>
+
+        <?php
+            $tree = menu_tree('menu-top-menu');
+            print render($tree);
+        ?>
     </div>
 
     <div id="logo">

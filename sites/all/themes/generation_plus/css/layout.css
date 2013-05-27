@@ -159,7 +159,6 @@ div.error, .error {
 
 /*Top menu*/
 #top-menu {
-    position: relative;
     background-color:#434343;
     height: 28px;
     border-radius: 0 0 25px 25px;
@@ -177,8 +176,8 @@ div.error, .error {
 }
 
 #location {
-    position: absolute;
-    left: 18px;
+   float: left;
+   margin-left: 18px;
 }
 
 #location a {
@@ -205,14 +204,15 @@ div.error, .error {
 }
 
 #login-block {
-    position: absolute;
-    top: 0;
-    right: 23px;
+    float: right;
+    margin-right: 23px;
+    color: #ffffff;
+    line-height: 25px;
 }
 
-#login-block a {
+#login-block .logininfo {
     margin-left: 5px;
-    line-height: 25px;
+    display: inline-block;
 }
 /*End Top menu*/
 
