@@ -56,10 +56,9 @@
             ?>
         <div id="login-block">
             <img src="<?php print $theme_path ?>/images/key.png" width="19" height="10">
-            <?php echo $OUTPUT->login_info(); ?>
 
             <?php if (user_is_logged_in()): ?>
-                <?php print l(t('Выйти'), 'user/logout', array('absolute' => TRUE)) ?>
+                <?php print l(t('Выйти'), 'user/logout', array('absolute' => true)) ?>
             <?php else: ?>
                 <a href="#" id="login-link">Войти</a>
             <?php endif; ?>
