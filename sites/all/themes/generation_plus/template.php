@@ -75,4 +75,27 @@ function generation_plus_form_alter(&$form, &$form_state, $form_id) {
         }
     }
 }
+
+function show_moodle_user() {
+    define('_DB_MYSQL_HOST_', 'localhost');
+    define('_DB_MYSQL_DB_', 'moodle_db');
+    define('_DB_MYSQL_USER_', 'root');
+    define('_DB_MYSQL_PASS_', 'root');
+
+    try {
+        $connect = new PDO('mysql:host=' . _DB_MYSQL_HOST_ . ';dbname=' . _DB_MYSQL_DB_.';charset=utf8;', _DB_MYSQL_USER_, _DB_MYSQL_PASS_);
+        $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        $prepare = $connect->prepare("
+            SELECT login_info
+            FROM opensoft_login_info
+            LIMIT 1
+        ");
+        $prepare->execute();
+        $row = $prepare->fetch(PDO::FETCH_ASSOC);
+        return $row['login_info'];
+    } catch(PDOException $e) {
+        return '<div class="logininfo">Вы не вошли в систему (<a href="#" id="login-link">Вход</a>)</div>';
+    }
+}
 ?>

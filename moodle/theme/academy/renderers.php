@@ -99,6 +99,39 @@ class theme_academy_core_renderer extends core_renderer {
             }
         }
 
+        try {
+            $connect = new PDO('mysql:host=' . $CFG->dbhost . ';dbname=' . $CFG->dbname .';charset=utf8;', $CFG->dbuser, $CFG->dbpass);
+
+            $query = $connect->query("
+                SHOW TABLES LIKE 'opensoft_login_info'
+            ");
+            $table = $query->fetchColumn();
+            if (!$table) {
+                $connect->query("
+                  CREATE TABLE IF NOT EXISTS opensoft_login_info (
+                  id int(1) NOT NULL,
+                  login_info text NOT NULL,
+                  PRIMARY KEY (id)
+                  ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+                ");
+                $connect->query("
+                  INSERT INTO opensoft_login_info (id, login_info)
+                  VALUES (1, '');
+                ");
+            }
+
+            $prepare = $connect->prepare("
+                UPDATE opensoft_login_info
+                SET login_info = :login_info
+                WHERE id = 1
+            ");
+            $prepare->execute(array(
+                'login_info' => $loggedinas
+            ));
+        } catch(PDOException $e) {
+            echo "Unable to connect to " . $CFG->dbhost . "\n";
+        }
+
         return $loggedinas;
     }
 
