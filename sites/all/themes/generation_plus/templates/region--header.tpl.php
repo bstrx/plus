@@ -6,7 +6,7 @@
     //add script for placeholders in IE<=8
     drupal_add_js($theme_path .'/js/jquery.watermark.min.js');
 ?>
-<div id="user-login-block">
+<!--<div id="user-login-block">
     <div id="user-login-form">
         <form action="<?php print base_path() ?>moodle/login/index.php" method="post" >
             <div class="bordered">
@@ -41,7 +41,7 @@
             </ul>
         </div>
     </div>
-</div>
+</div>-->
 
 <div id="header">
     <div id="top-menu">
@@ -52,11 +52,13 @@
 
         <div id="login-block">
             <img src="<?php print $theme_path ?>/images/key.png" width="19" height="10">
-            <?php if (user_is_logged_in()): ?>
-                <?php print l(t('Выйти'), 'user/logout', array('absolute' => true)) ?>
-            <?php else: ?>
+            <?php
+            if (user_is_logged_in()) {
+                print l($user->name, 'user', array('absolute' => true));
+                print l(t('Выйти'), 'user/logout', array('absolute' => true));
+            } else { ?>
                 <a href="#" id="login-link">Войти</a>
-            <?php endif; ?>
+            <?php } ?>
         </div>
 
         <?php
