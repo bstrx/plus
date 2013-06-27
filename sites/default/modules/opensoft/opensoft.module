@@ -27,7 +27,20 @@ function getActiveMoodleUser() {
             $result = db_query($q);
             $userInfo = $result->fetchAssoc();
             return $userInfo;
-        }
+        } else unset($_COOKIE['MoodleSession']);
+    }
+
+    return false;
+}
+
+
+function opensoft_simplenews_subscribe_user($subscriber, $subscription) {
+    setcookie("simplenews", $subscriber->mail);
+}
+
+function checkSimplenewsSubscription () {
+    if (isset($_COOKIE['simplenews']) && $_COOKIE['simplenews']) {
+        return true;
     }
 
     return false;
