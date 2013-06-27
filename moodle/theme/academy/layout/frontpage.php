@@ -67,7 +67,7 @@ echo $OUTPUT->doctype() ?>
                 </form>
                 <div class="item-list">
                     <ul>
-                        <li class="first"><a href="#" title="Регистрация">Регистрация</a></li>
+                        <li class="first"><a href="<?php echo $CFG->wwwroot.'/login/signup.php'; ?>" title="Регистрация">Регистрация</a></li>
                         <li>
                             <form action="<?php echo get_login_url() ?>" method="post" id="guestlogin">
                                 <div class="guestform">

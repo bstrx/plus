@@ -52,8 +52,17 @@
 
         <div id="login-block">
             <img src="<?php print $theme_path ?>/images/key.png" width="19" height="10">
-            <?php if (user_is_logged_in()): ?>
-                <?php print l(t('Выйти'), 'user/logout', array('absolute' => true)) ?>
+
+            <?php if ($userInfo = getActiveMoodleUser()): ?>
+                <?php
+                    $fullName = $userInfo['firstname'] . ' ' . $userInfo['lastname'];
+                    $maxChars = 40;
+                    //cut users's name to fit in top menu
+                    $limitedFullName = (mb_strlen($fullName, 'UTF-8') > $maxChars) ? trim( mb_substr($fullName, 0, $maxChars,  'UTF-8')) . '...' : $fullName;
+                ?>
+                Вы зашли под именем <a href="moodle/user/profile.php?id=<?=$userInfo['id']?>"  title='<?=$fullName?>'?><?=$limitedFullName?></a>
+
+                <?php print l(t('Выйти'), 'moodle/login/logout.php', array('absolute' => true)) ?>
             <?php else: ?>
                 <a href="#" id="login-link">Войти</a>
             <?php endif; ?>
@@ -66,7 +75,7 @@
     </div>
 
     <div id="logo">
-        <a href="<?php print $base_path?>">
+        <a href="<?php print base_path()?>">
             <img src="<?php print $theme_path ?>/images/logo.png" width="364" height="108">
         </a>
     </div>
