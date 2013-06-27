@@ -102,7 +102,7 @@ echo $OUTPUT->doctype() ?>
             </div>
 
             <div id="logo">
-                <a href="">
+                <a href="<?php echo $CFG->wwwroot ?>">
                     <img src="<?php echo $OUTPUT->pix_url('logo', 'theme') ?>" width="364" height="108">
                 </a>
             </div>

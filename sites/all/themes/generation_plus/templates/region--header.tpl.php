@@ -60,11 +60,11 @@
                     //cut users's name to fit in top menu
                     $limitedFullName = (mb_strlen($fullName, 'UTF-8') > $maxChars) ? trim( mb_substr($fullName, 0, $maxChars,  'UTF-8')) . '...' : $fullName;
                 ?>
-                Вы зашли под именем <a href="moodle/user/profile.php?id=<?=$userInfo['id']?>"  title='<?=$fullName?>'?><?=$limitedFullName?></a>
+                Вы зашли под именем <a href="/moodle/user/profile.php?id=<?=$userInfo['id']?>"  title='<?=$fullName?>'?><?=$limitedFullName?></a>
 
-                <?php print l(t('Выйти'), 'moodle/login/logout.php', array('absolute' => true)) ?>
+                (<?php print l(t('Выход'), 'moodle/login/logout.php', array('absolute' => true)) ?>)
             <?php else: ?>
-                <a href="#" id="login-link">Войти</a>
+                <?php print l(t('Войти'), 'moodle/login/index.php', array('absolute' => true, 'attributes' => array('id' => 'login-link'))) ?>
             <?php endif; ?>
         </div>
 

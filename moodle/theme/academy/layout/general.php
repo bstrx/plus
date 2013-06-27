@@ -80,7 +80,7 @@ echo $OUTPUT->doctype() ?>
                 </form>
                 <div class="item-list">
                     <ul>
-                        <li class="first"><a href="#" title="Регистрация">Регистрация</a></li>
+                        <li class="first"><a href="<?php echo $CFG->wwwroot.'/login/signup.php'; ?>" title="Регистрация">Регистрация</a></li>
                         <li>
                             <form action="<?php echo get_login_url() ?>" method="post" id="guestlogin">
                                 <div class="guestform">
@@ -103,20 +103,19 @@ echo $OUTPUT->doctype() ?>
                     <?php echo $OUTPUT->login_info(); ?>
                 </div>
 
-                <?php if ($hasheading) { ?>
-                    <div class="headermenu"><?php
-                        echo $PAGE->headingmenu;
-                        ?></div>
-                <?php } ?>
-
                 <?php if ($hascustommenu) { ?>
                     <div id="custommenu"><?php echo $custommenu; ?></div>
                 <?php } ?>
 
+                <?php if ($hasheading) { ?>
+                    <div class="headermenu">
+                        <?php echo $PAGE->headingmenu; ?>
+                    </div>
+                <?php } ?>
             </div>
 
             <div id="logo">
-                <a href="">
+                <a href="<?php echo $CFG->wwwroot ?>">
                     <img src="<?php echo $OUTPUT->pix_url('logo', 'theme') ?>" width="364" height="108">
                 </a>
             </div>
