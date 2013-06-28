@@ -28,7 +28,7 @@
         </form>
         <div class="item-list">
             <ul>
-                <li class="first"><a href="#" title="Регистрация">Регистрация</a></li>
+                <li class="first"><a href="<?php print base_path() ?>moodle/login/signup.php" title="Регистрация">Регистрация</a></li>
                 <li>
                     <form action="<?php print base_path() ?>moodle/login/index.php" method="post" id="guestlogin">
                         <div class="guestform">
@@ -60,7 +60,18 @@
                     //cut users's name to fit in top menu
                     $limitedFullName = (mb_strlen($fullName, 'UTF-8') > $maxChars) ? trim( mb_substr($fullName, 0, $maxChars,  'UTF-8')) . '...' : $fullName;
                 ?>
-                Вы зашли под именем <a href="/moodle/user/profile.php?id=<?=$userInfo['id']?>"  title='<?=$fullName?>'?><?=$limitedFullName?></a>
+                Вы зашли под именем
+                <?php
+                    print l(t($limitedFullName), 'moodle/user/profile.php', array(
+                        'absolute' => true,
+                        'attributes' => array(
+                            'title' => $fullName
+                        ),
+                        'query' => (array(
+                            'id' => $userInfo['id']
+                        ))
+                    ))
+                ?>
 
                 (<?php print l(t('Выход'), 'moodle/login/logout.php', array('absolute' => true)) ?>)
             <?php else: ?>
